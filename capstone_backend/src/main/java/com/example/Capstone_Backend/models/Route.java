@@ -20,7 +20,6 @@ public class Route {
 
     @ManyToOne
     @JoinColumn( name="driver_id" )
-    @Column(name="driver")
     private Driver driver;
 
     @Column(name="distance")
