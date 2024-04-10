@@ -25,6 +25,8 @@ public class Order {
 
     @JsonIgnoreProperties({"route"})
     @ManyToOne
+    @JoinColumn(name="route_id")
+    @Column(name = "route")
     private Route route;
 
     public Order() {
