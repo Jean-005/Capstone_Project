@@ -26,3 +26,22 @@ public class Order {
     @JsonIgnoreProperties({"route"})
     @ManyToOne
     private Route route;
+
+    public Order() {
+    }
+
+    public Order(Long id, int orderNumber, String pickupLocation, String deliveryLocation, boolean isDelivered, Route route) {
+        this.id = id;
+        this.orderNumber = orderNumber;
+        this.pickupLocation = pickupLocation;
+        this.deliveryLocation = deliveryLocation;
+        this.isDelivered = isDelivered;
+        this.route = route;
+    }
+}
+
+
+
+
+
+
