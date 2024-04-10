@@ -38,6 +38,11 @@ This front-end project utilises JavaScript and the React library to create a dyn
 
 ### Extensions
 
+### Project Timeline
+
+
+<img width="1282" alt="Screenshot 2024-04-10 at 08 59 27" src="https://github.com/Jean-005/Capstone_Project/assets/156692751/9e4699f0-01fd-42b7-96ce-6b807a437367">
+
 
 
 ### Wireframe
