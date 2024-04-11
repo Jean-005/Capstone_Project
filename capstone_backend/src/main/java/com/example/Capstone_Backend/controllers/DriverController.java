@@ -23,6 +23,15 @@ public class DriverController {
         List<Driver> allDrivers = driverService.getAllDrivers();
         return new ResponseEntity<>(allDrivers, HttpStatus.OK);
     }
+
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<Driver> getDriverById(@PathVariable Long id){
+        Optional<Driver> foundDriver = driverService.findDriver(id);
+        if(foundDriver.isPresent()){
+            return new ResponseEntity<>(foundDriver.get(), HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
 //
 //    @PatchMapping (value = "/{id}")                                        // add driverDTO?
 //    public ResponseEntity<Driver> updateDriver(@PathVariable Long id, @RequestBody DriverDTO driverDTO){
