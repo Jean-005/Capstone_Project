@@ -39,13 +39,11 @@ public class Order {
     public Order() {
     }
 
-    public Order(Long id, int orderNumber, String pickupLocation, String deliveryLocation, boolean isDelivered, Route route, List<Double> pickupGeocode, List<Double> deliveryGeocode){
-        this.id = id;
+    public Order(int orderNumber, String pickupLocation, String deliveryLocation, List<Double> pickupGeocode, List<Double> deliveryGeocode){
         this.orderNumber = orderNumber;
         this.pickupLocation = pickupLocation;
         this.deliveryLocation = deliveryLocation;
-        this.isDelivered = isDelivered;
-        this.route = route;
+        this.isDelivered = false;
         this.pickupGeocode = pickupGeocode;
         this.deliveryGeocode = deliveryGeocode;
     }
