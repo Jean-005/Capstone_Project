@@ -14,11 +14,6 @@ public class DriverService {
     @Autowired
     DriverRepository driverRepository;
 
-
-    public List<Driver> getAllDrivers() {
-        return driverRepository.findAll();
-    }
-
     public Optional<Driver> findDriver(Long id) {
         return driverRepository.findById(id);
     }
