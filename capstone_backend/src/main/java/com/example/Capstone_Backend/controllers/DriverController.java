@@ -33,7 +33,7 @@ public class DriverController {
     public ResponseEntity<Driver> updateDriverById(@PathVariable Long id, @RequestBody DriverDTO driverDTO){
         Optional<Driver> driver = driverService.getDriverById(id);
         if (driver.isPresent()) {
-            Driver updatedDriver = driverService.updateDriver(id, driverDTO);
+            Driver updatedDriver = driverService.updateDriverById(id, driverDTO);
             return new ResponseEntity<>(updatedDriver, HttpStatus.OK);
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
