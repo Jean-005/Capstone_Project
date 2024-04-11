@@ -2,6 +2,7 @@ package com.example.Capstone_Backend.components;
 
 import com.example.Capstone_Backend.models.Driver;
 import com.example.Capstone_Backend.models.Order;
+import com.example.Capstone_Backend.models.Route;
 import com.example.Capstone_Backend.repositories.DriverRepository;
 import com.example.Capstone_Backend.repositories.OrderRepository;
 import com.example.Capstone_Backend.repositories.RouteRepository;
@@ -51,6 +52,11 @@ public class DataLoader implements ApplicationRunner {
         orderRepository.save(order4);
         Order order5 = new Order(776543,pickupLocation ,"Royal Albert Hall, Kensington Gore, South Kensington, London SW7 2AP", Arrays.asList(51.500942, -0.177498), pickupGeocode);
         orderRepository.save(order5);
+
+        Route route1 = new Route(Arrays.asList(order1, order2, order3), aebel, 100, 180);
+        routeRepository.save(route1);
+        Route route2 = new Route(Arrays.asList(order4, order5), jean, 60, 120);
+        routeRepository.save(route2);
 
     }
 }

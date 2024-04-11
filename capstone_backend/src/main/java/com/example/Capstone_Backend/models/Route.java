@@ -33,6 +33,14 @@ public class Route {
 
     public Route(){}
 
+    public Route(List<Order> orders, Driver driver, int distance, int duration){
+        this.orders = orders;
+        this.driver = driver;
+        this.distance = distance;
+        this.duration = duration;
+        this.isComplete = false;
+    }
+
     public long getId() {
         return this.id;
     }
