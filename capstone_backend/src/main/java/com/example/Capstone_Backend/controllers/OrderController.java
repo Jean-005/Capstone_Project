@@ -15,10 +15,10 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
-    @PatchMapping (value = "/{id")
-    public ResponseEntity<Order> updateOrderStatusById(@PathVariable long id, @RequestBody boolean isDelivered){
-        Optional<Order> orderOptional = orderService.findOrderStatusById(id);
-        if (orderOptional)
-    }
+//    @PatchMapping (value = "/{id")
+//    public ResponseEntity<Order> updateOrderStatusById(@PathVariable long id, @RequestBody boolean isDelivered){
+//        Optional<Order> orderOptional = orderService.findOrderStatusById(id);
+//        if (orderOptional)
+//    }
 
 }
