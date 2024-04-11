@@ -9,13 +9,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-
 @RestController
 @RequestMapping("orders")
 public class OrderController {
 
     @Autowired
     OrderService orderService;
+
+
+    @GetMapping
+    public ResponseEntity<List<Order>> getAllOrders(){
+        List<Order> allOrders = orderService.getAllOrders();
+        return new ResponseEntity<>(allOrders, HttpStatus.OK);
+    }
 
 
     @GetMapping(value = "/{id}")
@@ -35,6 +41,5 @@ public class OrderController {
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
-
 
 }

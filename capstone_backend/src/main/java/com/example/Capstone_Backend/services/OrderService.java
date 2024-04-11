@@ -6,12 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PatchMapping;
 import java.util.Optional;
+import java.util.List;
 
 @Service
 public class OrderService {
+
     @Autowired
     OrderRepository orderRepository;
 
+
+    public List<Order> getAllOrders() {
+        return orderRepository.findAll();
+    }
 
     public Optional<Order> findOrderById(long id) {
         return orderRepository.findById(id);
@@ -26,4 +32,5 @@ public class OrderService {
         }
         return optionalOrderToUpdate;
     }
+  
 }
