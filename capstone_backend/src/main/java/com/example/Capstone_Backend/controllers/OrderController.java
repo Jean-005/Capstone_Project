@@ -17,11 +17,11 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
-    @PatchMapping (value = "/{id")
+    @PatchMapping (value = "/{id}")
     public ResponseEntity<Order> updateOrderStatusById(@PathVariable long id, @RequestBody boolean isDelivered){
-        Order updateOrder = orderService.updateOrderStatus(id, isDelivered);
-        if (updateOrder != null) {
-            return new ResponseEntity<>(updateOrder, HttpStatus.OK);
+        Optional<Order> optionalOrder = orderService.updateOrderStatus(id, isDelivered);
+        if (optionalOrder.isPresent()) {
+            return new ResponseEntity<>(optionalOrder.get(), HttpStatus.OK);
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }

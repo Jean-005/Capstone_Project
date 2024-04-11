@@ -6,18 +6,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PatchMapping;
 
+import java.util.Optional;
+
 @Service
 public class OrderService {
     @Autowired
     OrderRepository orderRepository;
 
 
-    public Order updateOrderStatus(long id, boolean isDelivered) {
-        Order orderToUpdate = orderRepository.findById(id).get();
-        if (orderToUpdate != null) {
+    public Optional<Order> updateOrderStatus(long id, boolean isDelivered) {
+        Optional<Order> optionalOrderToUpdate = orderRepository.findById(id);
+        if (optionalOrderToUpdate.isPresent()) {
+            Order orderToUpdate = optionalOrderToUpdate.get();
             orderToUpdate.setDelivered(isDelivered);
             orderRepository.save(orderToUpdate);
         }
-        return orderToUpdate;
+        return optionalOrderToUpdate;
     }
 }
