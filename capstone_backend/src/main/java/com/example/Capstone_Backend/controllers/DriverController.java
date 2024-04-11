@@ -38,15 +38,15 @@ public class DriverController {
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
-
-//    @DeleteMapping(value = "/{id}")
-//    public ResponseEntity<Long> deleteDriver(@PathVariable Long id) {
-//        Optional<Driver> driver = driverService.getDriverById(id);
-//        if (driver.isPresent()) {
-//            driverService.deleteDriver(id);
-//            return new ResponseEntity<>(id, HttpStatus.OK);
-//        }
-//        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-//    }
+   
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Long> deleteDriverById(@PathVariable Long id) {
+        Optional<Driver> driver = driverService.getDriverById(id);
+        if (driver.isPresent()) {
+            driverService.deleteDriver(id);
+            return new ResponseEntity<>(id, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
 
 }

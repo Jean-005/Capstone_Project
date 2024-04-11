@@ -28,6 +28,8 @@ public class Driver {
     @JsonIgnore
     private List<Route> routes;
 
+    public Driver(){}
+
     public Driver(String name, String emailAddress, String phone) {
         this.name = name;
         this.emailAddress = emailAddress;
