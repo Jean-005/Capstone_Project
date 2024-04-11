@@ -21,14 +21,14 @@ public class Driver {
     private String emailAddress;
 
     @Column
-    private long phone;
+    private String phone;
 
     @Column
     @OneToMany(mappedBy = "driver")
     @JsonIgnore
     private List<Route> routes;
 
-    public Driver(String name, String emailAddress, long phone) {
+    public Driver(String name, String emailAddress, String phone) {
         this.name = name;
         this.emailAddress = emailAddress;
         this.phone = phone;
@@ -59,11 +59,11 @@ public class Driver {
         this.emailAddress = emailAddress;
     }
 
-    public long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(long phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
