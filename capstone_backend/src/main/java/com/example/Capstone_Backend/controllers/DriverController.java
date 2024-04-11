@@ -4,6 +4,7 @@ package com.example.Capstone_Backend.controllers;
 import com.example.Capstone_Backend.models.Driver;
 import com.example.Capstone_Backend.models.DriverDTO;
 import com.example.Capstone_Backend.services.DriverService;
+import jakarta.persistence.GeneratedValue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,10 @@ public class DriverController {
     @Autowired
     DriverService driverService;
 
+    @GetMapping
+    public ResponseEntity<List<Driver>> getAllDrivers() {
+        return new ResponseEntity<>(driverService.getAllDrivers(), HttpStatus.OK);
+    }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Driver> getDriverById(@PathVariable Long id){
