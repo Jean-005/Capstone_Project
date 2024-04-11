@@ -3,6 +3,8 @@ package com.example.Capstone_Backend.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "orders")
 public class Order {
@@ -18,7 +20,13 @@ public class Order {
     private String pickupLocation;
 
     @Column
+    private List<Double> pickupGeocode;
+
+    @Column
     private String deliveryLocation;
+
+    @Column
+    private List<Double> deliveryGeocode;
 
     @Column
     private boolean isDelivered;
@@ -31,13 +39,15 @@ public class Order {
     public Order() {
     }
 
-    public Order(Long id, int orderNumber, String pickupLocation, String deliveryLocation, boolean isDelivered, Route route){
+    public Order(Long id, int orderNumber, String pickupLocation, String deliveryLocation, boolean isDelivered, Route route, List<Double> pickupGeocode, List<Double> deliveryGeocode){
         this.id = id;
         this.orderNumber = orderNumber;
         this.pickupLocation = pickupLocation;
         this.deliveryLocation = deliveryLocation;
         this.isDelivered = isDelivered;
         this.route = route;
+        this.pickupGeocode = pickupGeocode;
+        this.deliveryGeocode = deliveryGeocode;
     }
 
     public Long getId() {
