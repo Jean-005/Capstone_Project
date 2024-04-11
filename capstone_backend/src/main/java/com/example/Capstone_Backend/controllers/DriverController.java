@@ -32,16 +32,17 @@ public class DriverController {
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
-//
-//    @PatchMapping (value = "/{id}")                                        // add driverDTO?
-//    public ResponseEntity<Driver> updateDriver(@PathVariable Long id, @RequestBody DriverDTO driverDTO){
-//        Optional<Driver> driver = driverService.getDriverById(id);
-//        if (driver.isPresent()) {
-//            Driver updatedDriver = driverService.updateDriver(id, driverDTO);
-//            return new ResponseEntity<>(updatedDriver, HttpStatus.OK);
-//        }
-//        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-//    }
+
+    @PatchMapping (value = "/{id}")                                        // add driverDTO?
+    public ResponseEntity<Driver> updateDriver(@PathVariable Long id, @RequestBody DriverDTO driverDTO){
+        Optional<Driver> driver = driverService.getDriverById(id);
+        if (driver.isPresent()) {
+            Driver updatedDriver = driverService.updateDriver(id, driverDTO);
+            return new ResponseEntity<>(updatedDriver, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
 //    @DeleteMapping(value = "/{id}")
 //    public ResponseEntity<Long> deleteDriver(@PathVariable Long id) {
 //        Optional<Driver> driver = driverService.getDriverById(id);
