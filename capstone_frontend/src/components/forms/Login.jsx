@@ -1,5 +1,9 @@
 import { useState } from "react";
 import Registration from "./Registration";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
+
 
 const Login = () => {
 
@@ -29,25 +33,28 @@ const Login = () => {
             <div>
                 <h2>Login Form:</h2>
                 <form onSubmit={handleSubmit}>
-                    <label>
-                        Username:
-                        <input
-                            type="text"
-                            name="username"
-                            value={formData.username}
-                            onChange={handleInputChange}
-                        />
-                    </label>
-                    <label>
-                        Password:
-                        <input
-                            type="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleInputChange}
-                        />
-                    </label>
-                    <button type="submit">Login</button>
+                <TextField
+                    autoFocus
+                    required
+                    margin="dense"
+                    id="username"
+                    name="username"
+                    label="Username"
+                    type="text"
+                    fullWidth
+                    variant="standard"
+                />
+                <TextField
+                    required
+                    margin="dense"
+                    id="password"
+                    name="password"
+                    label="Password"
+                    type="password"
+                    fullWidth
+                    variant="standard"
+                />
+                    <Button type="submit">Login</Button>
                 </form>
             </div>
             <Registration />
