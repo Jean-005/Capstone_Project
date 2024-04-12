@@ -39,6 +39,20 @@ const Login = () => {
             <Dialog
                 open={registerOpen}
                 onClose={handleRegisterClose}
+                PaperProps={{
+                    component: 'form',
+                    onSubmit: (event) => {
+                        event.preventDefault();
+                        const formData = new FormData(event.currentTarget);
+                        const formJson = Object.fromEntries(formData.entries());
+                        const username = formJson.firstName;
+                        const password = formJson.lastName;
+                        const role = formJson.role;
+                        const phone = formJson.phone;
+                        const email = formJson.email;
+                        handleRegisterClose();
+                    },
+                }}
             >
                 <DialogTitle>Register</DialogTitle>
                 <DialogContent>
