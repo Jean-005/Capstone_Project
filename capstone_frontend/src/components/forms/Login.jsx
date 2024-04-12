@@ -43,7 +43,10 @@ const Login = () => {
             event.preventDefault();
             const formData = new FormData(event.currentTarget);
             const formJson = Object.fromEntries(formData.entries());
-            
+            const username = formJson.username;
+            const password = formJson.password;
+            console.log('Username:', username);
+            console.log('Password:', password);
             handleLoginClose();
           },
         }}
@@ -93,6 +96,27 @@ const Login = () => {
           <DialogContentText>
             Please enter your details to register.
           </DialogContentText>
+          <TextField
+            autoFocus
+            required
+            margin="dense"
+            id="firstName"
+            name="firstName"
+            label="First Name"
+            type="text"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            required
+            margin="dense"
+            id="lastName"
+            name="lastName"
+            label="Last Name"
+            type="text"
+            fullWidth
+            variant="standard"
+          />
           
         </DialogContent>
         <DialogActions>
