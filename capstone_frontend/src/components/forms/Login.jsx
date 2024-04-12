@@ -8,36 +8,43 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 const Login = () => {
-  const [open, setOpen] = React.useState(false);
+  const [loginOpen, setLoginOpen] = React.useState(false);
+  const [registerOpen, setRegisterOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
+  const handleLoginOpen = () => {
+    setLoginOpen(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
+  const handleLoginClose = () => {
+    setLoginOpen(false);
+  };
+
+  const handleRegisterOpen = () => {
+    setRegisterOpen(true);
+  };
+
+  const handleRegisterClose = () => {
+    setRegisterOpen(false);
   };
 
   return (
     <div>
+        <React.Fragment>
       <h2>Login Form:</h2>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open form dialog
+      <Button variant="outlined" onClick={handleLoginOpen}>
+        Open Login Form
       </Button>
       <Dialog
-        open={open}
-        onClose={handleClose}
+        open={loginOpen}
+        onClose={handleLoginClose}
         PaperProps={{
           component: 'form',
           onSubmit: (event) => {
             event.preventDefault();
             const formData = new FormData(event.currentTarget);
             const formJson = Object.fromEntries(formData.entries());
-            const username = formJson.username;
-            const password = formJson.password;
-            console.log('Username:', username);
-            console.log('Password:', password);
-            handleClose();
+            
+            handleLoginClose();
           },
         }}
       >
@@ -69,10 +76,13 @@ const Login = () => {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={handleLoginClose}>Cancel</Button>
           <Button type="submit">Login</Button>
         </DialogActions>
       </Dialog>
+
+      
+      </React.Fragment>
     </div>
   );
 }
