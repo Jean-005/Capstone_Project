@@ -29,7 +29,6 @@ const Login = () => {
 
   return (
     <div>
-        <React.Fragment>
       <h2>Login Form:</h2>
       <Button variant="outlined" onClick={handleLoginOpen}>
         Open Login Form
@@ -118,13 +117,52 @@ const Login = () => {
             variant="standard"
           />
           
+          <TextField
+            required
+            margin="dense"
+            id="role"
+            name="role"
+            label="Company Role"
+            type="text"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            required
+            margin="dense"
+            id="phone"
+            name="phone"
+            label="Phone Number"
+            type="tel"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            required
+            margin="dense"
+            id="email"
+            name="email"
+            label="Email"
+            type="email"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            required
+            margin="dense"
+            id="password"
+            name="password"
+            label="Password"
+            type="password"
+            fullWidth
+            variant="standard"
+          />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleRegisterClose}>Cancel</Button>
           <Button type="submit">Register</Button>
         </DialogActions>
       </Dialog>
-      </React.Fragment>
     </div>
   );
 }
