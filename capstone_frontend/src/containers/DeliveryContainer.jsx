@@ -3,16 +3,46 @@ import Profile from "../components/Profile";
 import RouteDisplay from "../components/RouteDisplay";
 import Login from "../components/forms/Login";
 import OrderList from "../components/lists/OrderList";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const DeliveryContainer = () => {
+
+    const deliveryRoutes = createBrowserRouter([
+        {
+            path: "/",
+            element: 
+            <Login />
+
+        },
+        {
+            path: "/driver",
+            element: 
+            <Navigation />,
+            children: [
+                {
+                    path: "/driver",
+                    element: 
+                    <RouteDisplay/>
+                },
+                {
+                    path: "/driver/profile",
+                    element:
+                    <Profile/>
+                }
+            ]
+        }
+
+    ]);
+
     return (
         <>
             <p>Delivery Container</p>
-            <Navigation />
+            {/* <Navigation />
             <OrderList />
             <Login />
             <Profile />
-            <RouteDisplay />
+            // <RouteDisplay /> */}
+            <RouterProvider router={deliveryRoutes}/>
         </>
     );
 }

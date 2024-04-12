@@ -1,8 +1,16 @@
+import { Outlet } from "react-router-dom";
+
 const Navigation = () => {
     return (
-        <p>
-            Navigation
-        </p>
+        <>
+
+            <p>
+                Navigation
+
+            </p>
+            <Outlet />
+        </>
+
     );
 }
 
