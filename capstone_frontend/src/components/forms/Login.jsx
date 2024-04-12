@@ -81,7 +81,25 @@ const Login = () => {
         </DialogActions>
       </Dialog>
 
-      
+      <Button variant="outlined" onClick={handleRegisterOpen}>
+        Register
+      </Button>
+      <Dialog
+        open={registerOpen}
+        onClose={handleRegisterClose}
+      >
+        <DialogTitle>Register</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Please enter your details to register.
+          </DialogContentText>
+          
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleRegisterClose}>Cancel</Button>
+          <Button type="submit">Register</Button>
+        </DialogActions>
+      </Dialog>
       </React.Fragment>
     </div>
   );
