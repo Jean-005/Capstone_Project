@@ -1,7 +1,7 @@
 const Order = () => {
-    return ( 
+    return (
         <p>Order 1:</p>
     );
 }
- 
+
 export default Order;

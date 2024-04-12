@@ -1,7 +1,7 @@
 const Login = () => {
-    return ( 
+    return (
         <p>Login Form:</p>
     );
 }
- 
+
 export default Login;

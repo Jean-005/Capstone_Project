@@ -1,12 +1,12 @@
 import Order from "../Order";
 
 const OrderList = () => {
-    return ( 
+    return (
         <>
-        <p>Order List:</p>
-        <Order />
+            <p>Order List:</p>
+            <Order />
         </>
     );
 }
- 
+
 export default OrderList;

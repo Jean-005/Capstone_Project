@@ -1,3 +1,4 @@
+import Navigation from "../components/Navigation";
 import Profile from "../components/Profile";
 import RouteDisplay from "../components/RouteDisplay";
 import Login from "../components/forms/Login";
@@ -7,6 +8,7 @@ const DeliveryContainer = () => {
     return (
         <>
             <p>Delivery Container</p>
+            <Navigation />
             <OrderList />
             <Login />
             <Profile />
