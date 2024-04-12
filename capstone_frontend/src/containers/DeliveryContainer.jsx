@@ -36,12 +36,6 @@ const DeliveryContainer = () => {
 
     return (
         <>
-            <p>Delivery Container</p>
-            {/* <Navigation />
-            <OrderList />
-            <Login />
-            <Profile />
-            // <RouteDisplay /> */}
             <RouterProvider router={deliveryRoutes}/>
         </>
     );
