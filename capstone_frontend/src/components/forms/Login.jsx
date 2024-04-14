@@ -54,7 +54,7 @@ const Login = () => {
                     fullWidth
                     variant="standard"
                 />
-                    <Button type="submit">Login</Button>
+                    <Button variant="outlined" type="submit">Login</Button>
                 </form>
             </div>
             <Registration />
