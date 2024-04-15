@@ -12,11 +12,19 @@ const DeliveryContainer = () => {
     const [routes, setRoutes] = useState([]);
 
     useEffect(() => {
-        fetchDrivers();
-        fetchOrders();
-        fetchRoutes();
-    }, [])
+        fetchDrivers()
+        fetchOrders()
+        fetchRoutes()
+    }, []);
 
+    useEffect(() => {
+        if (drivers.length > 0 && orders.length > 0){
+            postRoute()
+        }
+    }, [drivers, orders]);
+
+    // React Hook useEffect has a missing dependency: 'postRoute'. Either include it or remove the dependency array.
+ 
     // Drivers
     const fetchDrivers = async () => {
         const response = await fetch("http://localhost:8080/drivers", {
@@ -42,6 +50,49 @@ const DeliveryContainer = () => {
         });
         const routesJson = await response.json();
         setRoutes(routesJson);
+    }
+
+    const postRoute = async () => {
+        const API_KEY = "665251c294434ee4b95eb20b18fd58ac";
+        const agents = drivers.map((driver) => {
+            return {
+                "start_location": driver.startLocation,
+                "time_windows": [[0, 7200]]
+            }
+        });
+        const shipments = orders.map((order) => {
+            return { 
+                "id": order.id.toString(), 
+                "pickup": { 
+                    "location_index": 0, 
+                    "duration": 120 
+                }, 
+                "delivery": { 
+                    "location": order.deliveryGeocode, 
+                    "duration": 120 
+                } 
+            }
+        })
+        const body = {
+            "mode": "drive",
+            "agents": agents,
+            "shipments": shipments,
+            "locations": [
+                { 
+                    "id": "Buckingham Palace", 
+                    "location": [51.501476, -0.140634]
+                }
+            ]
+        };
+        const response = await fetch(`https://api.geoapify.com/v1/routeplanner?apiKey=${API_KEY}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+        const routesJson = await response.json();
+        console.log(routesJson);
     }
 
     const deliveryRoutes = createBrowserRouter([
