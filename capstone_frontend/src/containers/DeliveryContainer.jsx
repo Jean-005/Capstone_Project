@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 import Profile from "../components/Profile";
 import RouteDisplay from "../components/RouteDisplay";
@@ -6,6 +7,15 @@ import OrderList from "../components/lists/OrderList";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const DeliveryContainer = () => {
+    const [drivers, setDrivers] = useState([]);
+    const [orders, setOrders] = useState([]);
+    const [routes, setRoutes] = useState([]);
+
+    useEffect(() => {
+        fetchDrivers();
+        fetchOrders();
+        fetchRoutes();
+    }, [])
 
     // Drivers
     const fetchDrivers = async () => {
@@ -13,52 +23,48 @@ const DeliveryContainer = () => {
             method: "GET"
         });
         const driversJson = await response.json();
-        return driversJson;
+        setDrivers(driversJson);
     }
-    // tests:
-    // fetchDrivers().then((data) => console.log(data))
 
     // Orders
-    const fetchOrders = async() => {
+    const fetchOrders = async () => {
         const response = await fetch("http://localhost:8080/orders", {
             method: "GET"
         });
         const ordersJson = await response.json();
-        return ordersJson;
+        setOrders(ordersJson);
     }
-    // fetchOrders().then((data) => console.log(data))
-    
-    const fetchRoutes = async() => {
+
+    // Routes
+    const fetchRoutes = async () => {
         const response = await fetch("http://localhost:8080/routes", {
             method: "GET"
         });
         const routesJson = await response.json();
-        return routesJson;
+        setRoutes(routesJson);
     }
-    // fetchRoutes().then((data) => console.log(data))
-
 
     const deliveryRoutes = createBrowserRouter([
         {
             path: "/",
-            element: 
-            <Login />
+            element:
+                <Login />
 
         },
         {
             path: "/driver",
-            element: 
-            <Navigation />,
+            element:
+                <Navigation />,
             children: [
                 {
                     path: "/driver",
-                    element: 
-                    <RouteDisplay/>
+                    element:
+                        <RouteDisplay />
                 },
                 {
                     path: "/driver/profile",
                     element:
-                    <Profile/>
+                        <Profile />
                 }
             ]
         }
@@ -73,7 +79,7 @@ const DeliveryContainer = () => {
             <Login />
             <Profile />
             // <RouteDisplay /> */}
-            <RouterProvider router={deliveryRoutes}/>
+            <RouterProvider router={deliveryRoutes} />
         </>
     );
 }
