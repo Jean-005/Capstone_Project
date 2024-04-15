@@ -80,7 +80,7 @@ const DeliveryContainer = () => {
             "locations": [
                 { 
                     "id": "Buckingham Palace", 
-                    "location": [51.501476, -0.140634]
+                    "location": [-0.140634, 51.501476]
                 }
             ]
         };
