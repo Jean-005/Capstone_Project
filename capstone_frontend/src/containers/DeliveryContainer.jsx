@@ -10,7 +10,7 @@ const DeliveryContainer = () => {
     const [drivers, setDrivers] = useState([]);
     const [orders, setOrders] = useState([]);
     const [routes, setRoutes] = useState([]);
-
+    const [completedOrders, setCompletedOrders] = useState(false);
     useEffect(() => {
         fetchDrivers()
         fetchOrders()
@@ -18,13 +18,13 @@ const DeliveryContainer = () => {
     }, []);
 
     useEffect(() => {
-        if (drivers.length > 0 && orders.length > 0){
+        if (drivers.length > 0 && orders.length > 0) {
             postRoute()
         }
     }, [drivers, orders]);
 
     // React Hook useEffect has a missing dependency: 'postRoute'. Either include it or remove the dependency array.
- 
+
     // Drivers
     const fetchDrivers = async () => {
         const response = await fetch("http://localhost:8080/drivers", {
@@ -61,16 +61,16 @@ const DeliveryContainer = () => {
             }
         });
         const shipments = orders.map((order) => {
-            return { 
-                "id": order.id.toString(), 
-                "pickup": { 
-                    "location_index": 0, 
-                    "duration": 120 
-                }, 
-                "delivery": { 
-                    "location": order.deliveryGeocode, 
-                    "duration": 120 
-                } 
+            return {
+                "id": order.id.toString(),
+                "pickup": {
+                    "location_index": 0,
+                    "duration": 120
+                },
+                "delivery": {
+                    "location": order.deliveryGeocode,
+                    "duration": 120
+                }
             }
         })
         const body = {
@@ -78,8 +78,8 @@ const DeliveryContainer = () => {
             "agents": agents,
             "shipments": shipments,
             "locations": [
-                { 
-                    "id": "Buckingham Palace", 
+                {
+                    "id": "Buckingham Palace",
                     "location": [-0.140634, 51.501476]
                 }
             ]
@@ -110,7 +110,10 @@ const DeliveryContainer = () => {
                 {
                     path: "/driver",
                     element:
-                        <RouteDisplay />
+                        <>
+                            <RouteDisplay />
+                            <OrderList completedOrders={completedOrders} />
+                        </>
                 },
                 {
                     path: "/driver/profile",

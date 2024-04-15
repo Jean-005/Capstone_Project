@@ -1,6 +1,8 @@
-const Order = () => {
+const Order = ({order, completedOrders}) => {
+
+
     return (
-        <p>Order 1:</p>
+        <p>Order :</p>
     );
 }
 
