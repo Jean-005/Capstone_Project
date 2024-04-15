@@ -112,7 +112,8 @@ const DeliveryContainer = () => {
                     element:
                         <>
                             <RouteDisplay />
-                            <OrderList completedOrders={completedOrders} />
+                            <OrderList completedOrders={completedOrders} 
+                            setCompletedOrders={setCompletedOrders}/>
                         </>
                 },
                 {

@@ -1,8 +1,20 @@
-const Order = ({order, completedOrders}) => {
+const Order = ({ order, completedOrders, setCompletedOrders }) => {
 
-
+    const handleCheckedOrders = () => {
+        setCompletedOrders(!completedOrders);
+    }
     return (
-        <p>Order :</p>
+        <>
+            <p>{order.id}</p>
+            <p>Address: {order.deliveryLocation}</p>
+        
+            <input type="checkbox"
+                checked={completedOrders}
+                onChange={handleCheckedOrders}
+            />
+
+        </>
+
     );
 }
 
