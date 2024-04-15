@@ -39,18 +39,18 @@ public class DataLoader implements ApplicationRunner {
         Driver sahil = new Driver("Sahil", "sahil@test.com", "+443349200293");
         driverRepository.save(sahil);
 
-        List<Double> pickupGeocode = Arrays.asList(51.501476, -0.140634);
+        List<Double> pickupGeocode = Arrays.asList(-0.140634, 51.501476);
         String pickupLocation = "Buckingham Palace, London, SW1A 1AA";
 
-        Order order1 = new Order(349823,pickupLocation ,"Great Russell St, London WC1B 3DG", Arrays.asList(-0.12724418034731264,51.51920852847477), pickupGeocode);
+        Order order1 = new Order(349823,pickupLocation ,"Great Russell St, London WC1B 3DG", pickupGeocode, Arrays.asList(-0.12724418034731264,51.51920852847477));
         orderRepository.save(order1);
-        Order order2 = new Order(543553,pickupLocation ,"London Zoo, Outer Cir, London NW1 4RY", Arrays.asList(-0.15480659230689, 51.53480565), pickupGeocode);
+        Order order2 = new Order(543553,pickupLocation ,"London Zoo, Outer Cir, London NW1 4RY", pickupGeocode , Arrays.asList(-0.15480659230689, 51.53480565));
         orderRepository.save(order2);
-        Order order3 = new Order(234523,pickupLocation ,"Cross Bones Garden, Union St, London,  SE1 1TA", Arrays.asList(-0.0919393, 51.503344), pickupGeocode);
+        Order order3 = new Order(234523,pickupLocation ,"Cross Bones Garden, Union St, London,  SE1 1TA", pickupGeocode , Arrays.asList(-0.0919393, 51.503344));
         orderRepository.save(order3);
-        Order order4 = new Order(342323,pickupLocation , "32 London Bridge St, London SE1 9SG, United Kingdom", Arrays.asList(-0.0864458928542395, 51.5043421), pickupGeocode);
+        Order order4 = new Order(342323,pickupLocation , "32 London Bridge St, London SE1 9SG, United Kingdom", pickupGeocode , Arrays.asList(-0.0864458928542395, 51.5043421));
         orderRepository.save(order4);
-        Order order5 = new Order(776543,pickupLocation ,"Royal Albert Hall, Kensington Gore, South Kensington, London SW7 2AP", Arrays.asList(-0.177498, 51.500942), pickupGeocode);
+        Order order5 = new Order(776543,pickupLocation ,"Royal Albert Hall, Kensington Gore, South Kensington, London SW7 2AP", pickupGeocode , Arrays.asList(-0.177498, 51.500942));
         orderRepository.save(order5);
 
         Route route1 = new Route(Arrays.asList(order1, order2, order3), aebel, 100, 180);

@@ -39,7 +39,7 @@ public class Driver {
         this.emailAddress = emailAddress;
         this.phone = phone;
         this.routes = new ArrayList<>();
-        this.startLocation = Arrays.asList(51.501476, -0.140634);
+        this.startLocation = Arrays.asList(-0.140634, 51.501476);
     }
 
     public long getId() {
