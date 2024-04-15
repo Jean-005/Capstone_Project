@@ -81,4 +81,12 @@ public class Driver {
     public void setRoutes(List<Route> routes) {
         this.routes = routes;
     }
+
+    public List<Double> getStartLocation() {
+        return startLocation;
+    }
+
+    public void setStartLocation(List<Double> startLocation) {
+        this.startLocation = startLocation;
+    }
 }

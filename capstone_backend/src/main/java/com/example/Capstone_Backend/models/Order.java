@@ -95,6 +95,22 @@ public class Order {
     public void setRoute(Route route) {
         this.route = route;
     }
+
+    public List<Double> getPickupGeocode() {
+        return pickupGeocode;
+    }
+
+    public void setPickupGeocode(List<Double> pickupGeocode) {
+        this.pickupGeocode = pickupGeocode;
+    }
+
+    public List<Double> getDeliveryGeocode() {
+        return deliveryGeocode;
+    }
+
+    public void setDeliveryGeocode(List<Double> deliveryGeocode) {
+        this.deliveryGeocode = deliveryGeocode;
+    }
 }
 
 
