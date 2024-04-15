@@ -5,6 +5,7 @@ import RouteDisplay from "../components/RouteDisplay";
 import Login from "../components/forms/Login";
 import OrderList from "../components/lists/OrderList";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { act } from "@testing-library/react";
 
 const DeliveryContainer = () => {
     const [drivers, setDrivers] = useState([]);
@@ -92,6 +93,15 @@ const DeliveryContainer = () => {
             body: JSON.stringify(body)
         });
         const routesJson = await response.json();
+        const updatedRoutes = routesJson.features.map((feature) => {
+            return feature.properties.actions.filter((action) => {
+                if(action.type === "pickup"){
+                    return orders[action.shipment_id];
+                }
+
+            })
+        })
+        console.log(updatedRoutes)
         console.log(routesJson);
     }
 
