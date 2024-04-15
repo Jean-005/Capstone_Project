@@ -5,8 +5,9 @@
 2. [Installation instructions](#installation-instructions)
 3. [Usage](#usage)
 4. [Contributing Instructions](#contributing-instructions)
-5. [Credits and Acknowledgements](credits-and-acknowledgements)
-6. [Licences](#licences)
+5. [Credits and Acknowledgements](#credits-and-acknowledgements)
+6. [Resources](#resources)
+7. [Licences](#licences)
 
 ## Project Description
 
@@ -15,7 +16,7 @@ This front-end project utilises JavaScript and the React library to create a dyn
 
 **The names and versions of libraries used:**
 
- ### Front-end
+### Front-end
 - React.js
 - React Router DOM
 - Bootstrap
@@ -34,9 +35,19 @@ This front-end project utilises JavaScript and the React library to create a dyn
 
 
 ### MVP
-
+* [x] Complete entity diagrams
+* [x] Create a login form for the driver
+* [x] Ability to register a new driver
+* [x] Show all orders the driver has to display
+* [x] Show the map with the route the driver has to take
+* [x] Tick off when an order has been delivered  
 
 ### Extensions
+- Add a profile picture to the profile page
+- Display and update the driver's vehicle details
+- Display the driver's total deliveries made and rating
+- Create an admin login to view a list of all drivers
+
 
 ### Project Timeline
 
@@ -52,6 +63,9 @@ This front-end project utilises JavaScript and the React library to create a dyn
 
 
 ### Component diagram
+
+
+### Usage
 
 
 ### The URL of the deployed website:
@@ -83,3 +97,17 @@ This front-end project utilises JavaScript and the React library to create a dyn
 - Open the react project in the preferred IDE such as Visual Studio Code.
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
 
+
+### Credits and Acknowledgements
+
+|    |  Name   |         Github                   |
+|----|---------|--------------------------------- |
+|    | Aebel   | https://github.com/Aebel-Shajan  |
+|    | Jean    | https://github.com/Jean-005      |
+|    | Sahil   | https://github.com/sahilpatel1906|
+|    | Yesica  | https://github.com/ney601        |
+|    | Tommy   | https://github.com/Tommybui28    |
+
+### Resources
+
+### Licenses
