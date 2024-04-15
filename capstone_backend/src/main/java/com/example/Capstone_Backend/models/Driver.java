@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Entity
@@ -28,6 +29,9 @@ public class Driver {
     @JsonIgnore
     private List<Route> routes;
 
+    @Column
+    private List<Double> startLocation;
+
     public Driver(){}
 
     public Driver(String name, String emailAddress, String phone) {
@@ -35,6 +39,7 @@ public class Driver {
         this.emailAddress = emailAddress;
         this.phone = phone;
         this.routes = new ArrayList<>();
+        this.startLocation = Arrays.asList(51.501476, -0.140634);
     }
 
     public long getId() {
