@@ -7,6 +7,37 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const DeliveryContainer = () => {
 
+    // Drivers
+    const fetchDrivers = async () => {
+        const response = await fetch("http://localhost:8080/drivers", {
+            method: "GET"
+        });
+        const driversJson = await response.json();
+        return driversJson;
+    }
+    // tests:
+    // fetchDrivers().then((data) => console.log(data))
+
+    // Orders
+    const fetchOrders = async() => {
+        const response = await fetch("http://localhost:8080/orders", {
+            method: "GET"
+        });
+        const ordersJson = await response.json();
+        return ordersJson;
+    }
+    // fetchOrders().then((data) => console.log(data))
+    
+    const fetchRoutes = async() => {
+        const response = await fetch("http://localhost:8080/routes", {
+            method: "GET"
+        });
+        const routesJson = await response.json();
+        return routesJson;
+    }
+    // fetchRoutes().then((data) => console.log(data))
+
+
     const deliveryRoutes = createBrowserRouter([
         {
             path: "/",
