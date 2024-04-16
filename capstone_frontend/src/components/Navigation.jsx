@@ -17,7 +17,9 @@ import { Outlet, useNavigate } from 'react-router-dom';
 const Navigation = () => {
 
     const pages = ['Profile', 'Routes', 'Help'];
+    const pagesRoutes = ['profile', '', 'help'];
     const settings = ['Profile', 'Routes', 'Help', 'Logout'];
+    const settingsRoutes = ['profile', '', 'help', '/'];
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const navigate = useNavigate();
@@ -59,7 +61,7 @@ const Navigation = () => {
                                 textDecoration: 'none',
                             }}
                         >
-                            LOGO
+                            Capstone
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -91,9 +93,9 @@ const Navigation = () => {
                                     display: { xs: 'block', md: 'none' },
                                 }}
                             >
-                                {pages.map((page) => (
+                                {pages.map((page, index) => (
                                     <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Button key={page} onClick={() => { navigate(page.toLowerCase()) }}>
+                                        <Button key={page} onClick={() => { navigate(pagesRoutes[index].toLowerCase()) }}>
                                             <Typography textAlign="center">{page}</Typography>
                                         </Button>
                                     </MenuItem>
@@ -117,13 +119,13 @@ const Navigation = () => {
                                 textDecoration: 'none',
                             }}
                         >
-                            LOGO
+                            Capstone
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                            {pages.map((page) => (
+                            {pages.map((page, index) => (
                                 <Button
                                     key={page}
-                                    onClick={() => { navigate(page.toLowerCase()) }}
+                                    onClick={() => { navigate(pagesRoutes[index].toLowerCase()) }}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
                                 >
                                     {page}
@@ -153,10 +155,10 @@ const Navigation = () => {
                                 open={Boolean(anchorElUser)}
                                 onClose={handleCloseUserMenu}
                             >
-                                {settings.map((setting) => (
+                                {settings.map((setting, index) => (
 
                                     <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                        <Button key={setting} onClick={() => { navigate(setting.toLowerCase()) }}>
+                                        <Button key={setting} onClick={() => { navigate(settingsRoutes[index].toLowerCase()) }}>
                                             <Typography textAlign="center">{setting}</Typography>
                                         </Button>
                                     </MenuItem>
