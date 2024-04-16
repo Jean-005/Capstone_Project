@@ -1,4 +1,4 @@
-const RouteDisplay = () => {
+const RouteDisplay = ({currentUser}) => {
     return (
         <p>
             Route Display
