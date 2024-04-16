@@ -23,10 +23,25 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const { username, password } = formData;
-        console.log(username)
-        console.log(password)
 
-    };
+    if (!username.trim()) {
+        alert("Username is required");
+        return;
+    }
+
+    if (!password.trim()) {
+        alert("Password is required");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters long");
+        return;
+    }
+
+    console.log(username);
+    console.log(password);
+};
 
     return (
         <div>
@@ -43,6 +58,7 @@ const Login = () => {
                     type="text"
                     fullWidth
                     variant="standard"
+                    onChange={handleInputChange}
                 />
                 <TextField
                     required
@@ -53,6 +69,8 @@ const Login = () => {
                     type="password"
                     fullWidth
                     variant="standard"
+                    onChange={handleInputChange}
+
                 />
                     <Button variant="outlined" type="submit">Login</Button>
                 </form>
@@ -61,7 +79,7 @@ const Login = () => {
         </div>
     );
 
-}
+};
 
 export default Login;
 
