@@ -108,6 +108,7 @@ const Registration = () => {
                         type="text"
                         fullWidth
                         variant="standard"
+                        onChange={(event) => setFormData({ ...formData, firstName: event.target.value })}
                     />
                     <TextField
                         required
@@ -118,6 +119,7 @@ const Registration = () => {
                         type="text"
                         fullWidth
                         variant="standard"
+                        onChange={(event) => setFormData({ ...formData, lastName: event.target.value })}
                     />
 
                     <FormControl fullWidth required variant="standard">
@@ -142,6 +144,7 @@ const Registration = () => {
                         type="tel"
                         fullWidth
                         variant="standard"
+                        onChange={(event) => setFormData({ ...formData, phone: event.target.value })}
                     />
                     <TextField
                         required
@@ -152,6 +155,7 @@ const Registration = () => {
                         type="email"
                         fullWidth
                         variant="standard"
+                        onChange={(event) => setFormData({ ...formData, email: event.target.value })}
                     />
                     <TextField
                         required
@@ -162,6 +166,7 @@ const Registration = () => {
                         type="password"
                         fullWidth
                         variant="standard"
+                        onChange={(event) => setFormData({ ...formData, password: event.target.value })}
                     />
                 </DialogContent>
                 <DialogActions>
