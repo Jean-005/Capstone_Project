@@ -31,6 +31,25 @@ const Registration = () => {
         setRegisterOpen(false);
     };
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (!formData.firstName.trim()) {
+            alert("First Name is required");
+            return;
+        }
+
+        if (!formData.lastName.trim()) {
+            alert("Last Name is required");
+            return;
+        }
+
+        if (!formData.role) {
+            alert("Role is required");
+            return;
+
+        }
+
     return (
         <div>
             <Button variant="outlined" onClick={handleRegisterOpen}>
