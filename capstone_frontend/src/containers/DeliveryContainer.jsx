@@ -13,17 +13,19 @@ const DeliveryContainer = () => {
     const [routeFeatures, setRouteFeatures] = useState({});
     const [routes, setRoutes] = useState([]);
     const [completedOrders, setCompletedOrders] = useState(false);
+    const [currentUser, setCurrentUser] = useState([]);
+
     useEffect(() => {
         fetchDrivers()
         fetchOrders()
         fetchRoutes()
     }, []);
 
-    useEffect(() => {
-        if (drivers.length > 0 && orders.length > 0 && Object.keys(routeFeatures).length === 0){
-            postRoute()
-        }
-    }, [drivers, orders]);
+    // useEffect(() => {
+    //     if (drivers.length > 0 && orders.length > 0 && Object.keys(routeFeatures).length === 0){
+    //         postRoute()
+    //     }
+    // }, [drivers, orders]);
 
     // React Hook useEffect has a missing dependency: 'postRoute'. Either include it or remove the dependency array.
 
@@ -34,6 +36,10 @@ const DeliveryContainer = () => {
         });
         const driversJson = await response.json();
         setDrivers(driversJson);
+    }
+
+    const handleUserLogin = (user) => {
+        setCurrentUser(user)
     }
 
     // Orders
@@ -114,7 +120,10 @@ const DeliveryContainer = () => {
         {
             path: "/",
             element:
-                <Login />
+                <Login 
+                drivers={drivers}
+                handleUserLogin={handleUserLogin}
+                />
 
         },
         {
@@ -123,10 +132,11 @@ const DeliveryContainer = () => {
                 <Navigation />,
             children: [
                 {
-                    path: "/driver",
+                    path: "/driver/routes",
                     element:
                         <>
-                            <RouteDisplay />
+                            <RouteDisplay 
+                            currentUser={currentUser}/>
                             <OrderList 
                             orders={orders}
                             completedOrders={completedOrders} 
@@ -137,7 +147,8 @@ const DeliveryContainer = () => {
                     path: "/driver/profile",
                     element:
                         <Profile 
-                        drivers={drivers}
+                        driver={currentUser}
+                        
                         />
                 }
             ]
