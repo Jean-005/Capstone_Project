@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "38b8ee78-4249-440b-87e2-671f94f15f50",
+		"_postman_id": "fdb12e08-ce78-4739-a9c4-66718352de17",
 		"name": "Capstone_backend",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "32522632"
+		"_exporter_id": "32520234"
 	},
 	"item": [
 		{
@@ -131,6 +131,33 @@
 							"path": [
 								"drivers",
 								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postDriver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Able\",\n    \"emailAddress\": \"able@able.com\",\n    \"phone\": \"48134813\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/drivers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"drivers"
 							]
 						}
 					},
