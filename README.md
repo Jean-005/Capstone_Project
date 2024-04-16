@@ -11,7 +11,6 @@
 
 ## Project Description
 
-This front-end project utilises JavaScript and the React library to create a dynamic and interactive movie review application. The motivation behind this project was to provide users with a comprehensive platform where they can explore a vast collection of movies, leave reviews for movies and delve into detailed information about each film. The application aims to enhance user's movie-watching experience by offering advanced filtering options and a visually appealing interface. Through seamless navigation and intuitive design, users can effortlessly browse through various genres, filter movies based on their preferences, and access valuable insights such as ratings and reviews. Overall, the project seeks to deliver an immersive and enjoyable movie discovery experience for cinephiles and casual viewers alike.
 
 
 **The names and versions of libraries used:**
