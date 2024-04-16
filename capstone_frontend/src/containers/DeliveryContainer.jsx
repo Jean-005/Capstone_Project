@@ -12,18 +12,17 @@ const DeliveryContainer = () => {
     const [orders, setOrders] = useState([]);
     const [routeFeatures, setRouteFeatures] = useState({});
     const [routes, setRoutes] = useState([]);
-    const [completedOrders, setCompletedOrders] = useState(false);
     useEffect(() => {
         fetchDrivers()
         fetchOrders()
         fetchRoutes()
     }, []);
 
-    useEffect(() => {
-        if (drivers.length > 0 && orders.length > 0 && Object.keys(routeFeatures).length === 0){
-            postRoute()
-        }
-    }, [drivers, orders]);
+    // useEffect(() => {
+    //     if (drivers.length > 0 && orders.length > 0 && Object.keys(routeFeatures).length === 0){
+    //         postRoute()
+    //     }
+    // }, [drivers, orders]);
 
     // React Hook useEffect has a missing dependency: 'postRoute'. Either include it or remove the dependency array.
 
@@ -129,8 +128,7 @@ const DeliveryContainer = () => {
                             <RouteDisplay />
                             <OrderList 
                             orders={orders}
-                            completedOrders={completedOrders} 
-                            setCompletedOrders={setCompletedOrders}/>
+                            />
                         </>
                 },
                 {
