@@ -24,8 +24,6 @@ const Login = () => {
         event.preventDefault();
         const { username, password } = formData;
 
-    };
-
     if (!username.trim()) {
         alert("Username is required");
         return;
@@ -60,6 +58,7 @@ const Login = () => {
                     type="text"
                     fullWidth
                     variant="standard"
+                    onChange={handleInputChange}
                 />
                 <TextField
                     required
@@ -70,6 +69,8 @@ const Login = () => {
                     type="password"
                     fullWidth
                     variant="standard"
+                    onChange={handleInputChange}
+
                 />
                     <Button variant="outlined" type="submit">Login</Button>
                 </form>
@@ -78,7 +79,7 @@ const Login = () => {
         </div>
     );
 
-}
+};
 
 export default Login;
 
