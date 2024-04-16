@@ -11,10 +11,12 @@ const maps = {
   base: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 };
 
-const RouteDisplay = ({waypoints}) => {
+const RouteDisplay = ({route}) => {
   const [map, setMap] = useState(null);
-
-  if(waypoints.length === 0) {
+  if(!route) {
+    return <p>Map loading</p>
+  }
+  if(route.waypoints.length === 0) {
     return <p>Map loading</p>
   }
 
@@ -30,7 +32,7 @@ const RouteDisplay = ({waypoints}) => {
 
         <RoutingControl 
           position={'topleft'} 
-          waypoints ={waypoints}
+          waypoints ={route.waypoints}
           color={'#757de8'} 
         />
         
