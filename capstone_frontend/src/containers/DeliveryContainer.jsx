@@ -13,6 +13,8 @@ const DeliveryContainer = () => {
     const [routeFeatures, setRouteFeatures] = useState({});
     const [routes, setRoutes] = useState([]);
     const [completedOrders, setCompletedOrders] = useState(false);
+    const [currentUser, setCurrentUser] = useState([]);
+
     useEffect(() => {
         fetchDrivers()
         fetchOrders()
@@ -34,6 +36,10 @@ const DeliveryContainer = () => {
         });
         const driversJson = await response.json();
         setDrivers(driversJson);
+    }
+
+    const handleUserLogin = (user) => {
+        setCurrentUser(user)
     }
 
     // Orders
@@ -115,7 +121,9 @@ const DeliveryContainer = () => {
             path: "/",
             element:
                 <Login 
-                drivers={drivers}/>
+                drivers={drivers}
+                handleUserLogin={handleUserLogin}
+                />
 
         },
         {
@@ -127,7 +135,8 @@ const DeliveryContainer = () => {
                     path: "/driver/routes",
                     element:
                         <>
-                            <RouteDisplay />
+                            <RouteDisplay 
+                            currentUser={currentUser}/>
                             <OrderList 
                             orders={orders}
                             completedOrders={completedOrders} 
@@ -138,7 +147,8 @@ const DeliveryContainer = () => {
                     path: "/driver/profile",
                     element:
                         <Profile 
-                        drivers={drivers}
+                        driver={currentUser}
+                        
                         />
                 }
             ]
