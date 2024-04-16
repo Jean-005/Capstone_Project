@@ -4,7 +4,8 @@ import Profile from "../components/Profile";
 import RouteDisplay from "../components/RouteDisplay";
 import Login from "../components/forms/Login";
 import OrderList from "../components/lists/OrderList";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 
 const DeliveryContainer = () => {
     const [drivers, setDrivers] = useState([]);
@@ -92,6 +93,19 @@ const DeliveryContainer = () => {
             body: JSON.stringify(body)
         });
         const routesJson = await response.json();
+        const updatedRoutes = routesJson.features.map((feature) => {
+            // [ order1, order2] within one route
+            return feature.properties.actions.reduce((reducer1, action) => {
+                if(action.type === "pickup"){
+                    const filteredOrders = orders.filter((order)=>{if(order.id == action.shipment_id){return order}});
+                    return [...reducer1, ...filteredOrders];
+                } else{
+                    return [...reducer1];
+                }
+
+            }, [])
+        })
+        // console.log(updatedRoutes)
         console.log(routesJson);
     }
 
