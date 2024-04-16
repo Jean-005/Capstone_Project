@@ -46,7 +46,7 @@ const Login = ({ drivers, handleUserLogin }) => {
 
         if (driverExistence !== -1 && passwordExistence !== -1) {
             handleUserLogin(currentDriver);
-            navigate("/driver/routes")
+            navigate("/driver")
 
         }
         else { alert("Wrong Username or Password"); }

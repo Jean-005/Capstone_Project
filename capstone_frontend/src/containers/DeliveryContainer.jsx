@@ -12,6 +12,7 @@ const DeliveryContainer = () => {
     const [orders, setOrders] = useState([]);
     const [routeFeatures, setRouteFeatures] = useState({});
     const [routes, setRoutes] = useState([]);
+    const [currentUser, setCurrentUser] = useState([]);
 
     useEffect(() => {
         fetchDrivers()
@@ -130,7 +131,7 @@ const DeliveryContainer = () => {
                 <Navigation />,
             children: [
                 {
-                    path: "/driver/routes",
+                    path: "/driver",
                     element:
                         <>
                             <RouteDisplay 
