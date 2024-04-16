@@ -31,6 +31,45 @@ const Registration = () => {
         setRegisterOpen(false);
     };
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (!formData.firstName.trim()) {
+            alert("First Name is required");
+            return;
+        }
+
+        if (!formData.lastName.trim()) {
+            alert("Last Name is required");
+            return;
+        }
+
+        if (!formData.role) {
+            alert("Role is required");
+            return;
+        }
+
+        if (!formData.phone.trim()) {
+            alert("Phone Number is required");
+            return;
+        }
+
+        if (!formData.email.trim()) {
+            alert("Email is required");
+            return;
+        }
+
+        if (!formData.password.trim()) {
+            alert("Password is required");
+            return;
+        } else if (formData.password.length < 6) {
+            alert("Password must be at least 6 characters long");
+            return;
+        }
+
+        handleRegisterClose();
+    };
+
     return (
         <div>
             <Button variant="outlined" onClick={handleRegisterOpen}>
@@ -69,6 +108,7 @@ const Registration = () => {
                         type="text"
                         fullWidth
                         variant="standard"
+                        onChange={(event) => setFormData({ ...formData, firstName: event.target.value })}
                     />
                     <TextField
                         required
@@ -79,6 +119,7 @@ const Registration = () => {
                         type="text"
                         fullWidth
                         variant="standard"
+                        onChange={(event) => setFormData({ ...formData, lastName: event.target.value })}
                     />
 
                     <FormControl fullWidth required variant="standard">
@@ -103,6 +144,7 @@ const Registration = () => {
                         type="tel"
                         fullWidth
                         variant="standard"
+                        onChange={(event) => setFormData({ ...formData, phone: event.target.value })}
                     />
                     <TextField
                         required
@@ -113,6 +155,7 @@ const Registration = () => {
                         type="email"
                         fullWidth
                         variant="standard"
+                        onChange={(event) => setFormData({ ...formData, email: event.target.value })}
                     />
                     <TextField
                         required
@@ -123,6 +166,7 @@ const Registration = () => {
                         type="password"
                         fullWidth
                         variant="standard"
+                        onChange={(event) => setFormData({ ...formData, password: event.target.value })}
                     />
                 </DialogContent>
                 <DialogActions>
