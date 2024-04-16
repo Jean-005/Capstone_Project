@@ -12,8 +12,6 @@ const DeliveryContainer = () => {
     const [orders, setOrders] = useState([]);
     const [routeFeatures, setRouteFeatures] = useState({});
     const [routes, setRoutes] = useState([]);
-    const [completedOrders, setCompletedOrders] = useState(false);
-    const [currentUser, setCurrentUser] = useState([]);
 
     useEffect(() => {
         fetchDrivers()
@@ -139,8 +137,7 @@ const DeliveryContainer = () => {
                             currentUser={currentUser}/>
                             <OrderList 
                             orders={orders}
-                            completedOrders={completedOrders} 
-                            setCompletedOrders={setCompletedOrders}/>
+                            />
                         </>
                 },
                 {
