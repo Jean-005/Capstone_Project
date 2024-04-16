@@ -5,15 +5,23 @@ import {
   LayersControl
 } from "react-leaflet";
 import 'leaflet/dist/leaflet.css';
+import RoutingControl from './RoutingControl'
 
 const maps = {
   base: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 };
 
-const RouteDisplay = () => {
+const RouteDisplay = ({routes}) => {
   const [map, setMap] = useState(null);
   const [start, setStart] = useState([38.9072, -77.0369])
   const [end, setEnd] = useState([37.7749, -122.4194])
+  let waypoints =[];
+  if(routes.length > 0) {
+    waypoints = routes.map((order)=> {
+      return order.deliveryGeocode;
+    })
+  }
+  
 
   return (
     <div>
@@ -24,9 +32,12 @@ const RouteDisplay = () => {
         style={{ height: "50vh", width: "100%", padding: 0 }}
         whenCreated={map => setMap(map)}
       >
-        {/* *************** */}
-        {/* Pass in our custom control layer here, inside of the map container */}
-        {/* *************** */}
+
+        <RoutingControl 
+          position={'topleft'} 
+          waypoints ={waypoints}
+          color={'#757de8'} 
+        />
         
         <LayersControl position="topright">
           <LayersControl.BaseLayer checked name="Map">

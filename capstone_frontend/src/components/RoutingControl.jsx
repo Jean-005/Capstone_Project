@@ -3,13 +3,10 @@ import { createControlComponent } from "@react-leaflet/core";
 import "leaflet-routing-machine";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 
-const createRoutineMachineLayer = ({ position, start, end, color }) => {
+const createRoutineMachineLayer = ({ position, waypoints, color }) => {
   const instance = L.Routing.control({
     position,
-    waypoints: [
-      start,
-      end
-    ],
+    waypoints: waypoints,
     lineOptions: {
       styles: [
         {

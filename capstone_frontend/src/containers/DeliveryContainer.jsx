@@ -130,7 +130,7 @@ const DeliveryContainer = () => {
                     path: "/driver",
                     element:
                         <>
-                            <RouteDisplay routes={updatedRoutes}/>
+                            <RouteDisplay route={updatedRoutes} />
                             <OrderList 
                             orders={orders}
                             completedOrders={completedOrders} 
