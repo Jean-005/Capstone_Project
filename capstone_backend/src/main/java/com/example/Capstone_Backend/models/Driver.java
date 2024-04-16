@@ -32,15 +32,23 @@ public class Driver {
     @Column
     private List<Double> startLocation;
 
+    @Column
+    private String vehicleType;
+
+    @Column
+    private String licensePlateNumber;
+
     public Driver(){}
 
-    public Driver(String name, String emailAddress, String phone) {
+    public Driver(String name, String emailAddress, String phone, String vehicleType, String licensePlateNumber) {
         this.name = name;
         this.emailAddress = emailAddress;
         this.phone = phone;
         this.routes = new ArrayList<>();
         this.startLocation = Arrays.asList(-0.140634, 51.501476);
-    }p
+        this.vehicleType = vehicleType;
+        this.licensePlateNumber = licensePlateNumber;
+    }
 
     public long getId() {
         return id;
@@ -88,5 +96,21 @@ public class Driver {
 
     public void setStartLocation(List<Double> startLocation) {
         this.startLocation = startLocation;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
+    public String getLicensePlateNumber() {
+        return licensePlateNumber;
+    }
+
+    public void setLicensePlateNumber(String licensePlateNumber) {
+        this.licensePlateNumber = licensePlateNumber;
     }
 }
