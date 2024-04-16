@@ -2,11 +2,12 @@ import { useState } from "react";
 import Registration from "./Registration";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { useNavigate } from "react-router-dom";
 
 
 
-const Login = () => {
-
+const Login = ({drivers}) => {
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         username: '',
@@ -41,6 +42,17 @@ const Login = () => {
 
     console.log(username);
     console.log(password);
+    console.log(drivers);
+    const driverExistence = drivers.findIndex( driver => driver.name === username);
+    
+    const passwordExistence = drivers.findIndex(driver => driver.password === password);
+
+    if(driverExistence !== -1 && passwordExistence !== -1){
+        navigate("/driver/routes")   
+    }
+    else { alert("Wrong Username or Password"); }
+
+
 };
 
     return (

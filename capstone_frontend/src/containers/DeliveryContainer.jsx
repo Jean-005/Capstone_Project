@@ -19,11 +19,11 @@ const DeliveryContainer = () => {
         fetchRoutes()
     }, []);
 
-    useEffect(() => {
-        if (drivers.length > 0 && orders.length > 0 && Object.keys(routeFeatures).length === 0){
-            postRoute()
-        }
-    }, [drivers, orders]);
+    // useEffect(() => {
+    //     if (drivers.length > 0 && orders.length > 0 && Object.keys(routeFeatures).length === 0){
+    //         postRoute()
+    //     }
+    // }, [drivers, orders]);
 
     // React Hook useEffect has a missing dependency: 'postRoute'. Either include it or remove the dependency array.
 
@@ -114,7 +114,8 @@ const DeliveryContainer = () => {
         {
             path: "/",
             element:
-                <Login />
+                <Login 
+                drivers={drivers}/>
 
         },
         {
@@ -123,7 +124,7 @@ const DeliveryContainer = () => {
                 <Navigation />,
             children: [
                 {
-                    path: "/driver",
+                    path: "/driver/routes",
                     element:
                         <>
                             <RouteDisplay />
