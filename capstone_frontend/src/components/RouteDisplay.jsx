@@ -11,17 +11,12 @@ const maps = {
   base: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 };
 
-const RouteDisplay = ({routes}) => {
+const RouteDisplay = ({waypoints}) => {
   const [map, setMap] = useState(null);
-  const [start, setStart] = useState([38.9072, -77.0369])
-  const [end, setEnd] = useState([37.7749, -122.4194])
-  let waypoints =[];
-  if(routes.length > 0) {
-    waypoints = routes.map((order)=> {
-      return order.deliveryGeocode;
-    })
+
+  if(waypoints.length === 0) {
+    return <p>Map loading</p>
   }
-  
 
   return (
     <div>

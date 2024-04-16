@@ -14,7 +14,7 @@ const DeliveryContainer = () => {
     const [routes, setRoutes] = useState([]);
     const [completedOrders, setCompletedOrders] = useState(false);
     // To Do: Remove this and store in routes
-    const [updatedRoutes, setUpdatesRoutes] = useState([]);
+    const [waypointsList, setWaypointsList] = useState([]);
 
     useEffect(() => {
         fetchDrivers()
@@ -109,9 +109,11 @@ const DeliveryContainer = () => {
 
             }, [])
         })
-        setUpdatesRoutes(calculatedRoutes);
-        // console.log(updatedRoutes)
-        console.log(routesJson);
+
+       const calculatedWaypointsList = routesJson.features.map((feature) => {
+        return feature.properties.waypoints.map(waypoint => waypoint.location)
+       });
+       setWaypointsList(calculatedWaypointsList[0]);
     }
 
     const deliveryRoutes = createBrowserRouter([
@@ -130,7 +132,7 @@ const DeliveryContainer = () => {
                     path: "/driver",
                     element:
                         <>
-                            <RouteDisplay route={updatedRoutes} />
+                            <RouteDisplay waypoints={waypointsList} />
                             <OrderList 
                             orders={orders}
                             completedOrders={completedOrders} 
