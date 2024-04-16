@@ -4,7 +4,7 @@ import Profile from "../components/Profile";
 import RouteDisplay from "../components/RouteDisplay";
 import Login from "../components/forms/Login";
 import OrderList from "../components/lists/OrderList";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const DeliveryContainer = () => {
     const [drivers, setDrivers] = useState([]);
@@ -112,7 +112,9 @@ const DeliveryContainer = () => {
                     element:
                         <>
                             <RouteDisplay />
-                            <OrderList completedOrders={completedOrders} 
+                            <OrderList 
+                            orders={orders}
+                            completedOrders={completedOrders} 
                             setCompletedOrders={setCompletedOrders}/>
                         </>
                 },
@@ -135,6 +137,7 @@ const DeliveryContainer = () => {
             <Profile />
             // <RouteDisplay /> */}
             <RouterProvider router={deliveryRoutes} />
+
         </>
     );
 }
