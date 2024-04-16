@@ -23,10 +23,27 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const { username, password } = formData;
-        console.log(username)
-        console.log(password)
 
     };
+
+    if (!username.trim()) {
+        alert("Username is required");
+        return;
+    }
+
+    if (!password.trim()) {
+        alert("Password is required");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters long");
+        return;
+    }
+
+    console.log(username);
+    console.log(password);
+};
 
     return (
         <div>
