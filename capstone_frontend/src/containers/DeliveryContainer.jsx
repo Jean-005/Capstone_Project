@@ -94,14 +94,18 @@ const DeliveryContainer = () => {
         });
         const routesJson = await response.json();
         const updatedRoutes = routesJson.features.map((feature) => {
-            return feature.properties.actions.filter((action) => {
+            // [ order1, order2] within one route
+            return feature.properties.actions.reduce((reducer1, action) => {
                 if(action.type === "pickup"){
-                    return orders[action.shipment_id];
+                    const filteredOrders = orders.filter((order)=>{if(order.id == action.shipment_id){return order}});
+                    return [...reducer1, ...filteredOrders];
+                } else{
+                    return [...reducer1];
                 }
 
-            })
+            }, [])
         })
-        console.log(updatedRoutes)
+        // console.log(updatedRoutes)
         console.log(routesJson);
     }
 
