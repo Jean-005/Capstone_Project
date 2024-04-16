@@ -23,8 +23,7 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const { username, password } = formData;
-        console.log(username)
-        console.log(password)
+
 
     };
 
