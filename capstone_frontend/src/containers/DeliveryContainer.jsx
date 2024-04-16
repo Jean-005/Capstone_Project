@@ -12,6 +12,7 @@ const DeliveryContainer = () => {
     const [orders, setOrders] = useState([]);
     const [routeFeatures, setRouteFeatures] = useState({});
     const [routes, setRoutes] = useState([]);
+    const [currentUser, setCurrentUser] = useState([]);
 
     useEffect(() => {
         fetchDrivers()
@@ -34,6 +35,18 @@ const DeliveryContainer = () => {
         });
         const driversJson = await response.json();
         setDrivers(driversJson);
+    }
+
+    const addNewDriver = async (driver) => {
+        const response = await fetch("http://localhost:8080/drivers", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(driver)
+        });
+        const driversJson = await response.json();
+        setDrivers([...drivers, driversJson]);
     }
 
     const handleUserLogin = (user) => {
@@ -121,6 +134,7 @@ const DeliveryContainer = () => {
                 <Login 
                 drivers={drivers}
                 handleUserLogin={handleUserLogin}
+                addNewDriver = {addNewDriver}
                 />
 
         },

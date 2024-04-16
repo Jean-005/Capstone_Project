@@ -11,13 +11,11 @@ import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 
-const Registration = () => {
+const Registration = ({addNewDriver}) => {
     const [registerOpen, setRegisterOpen] = React.useState(false);
     const [formData, setFormData] = React.useState({
         username: '',
         password: '',
-        firstName: '',
-        lastName: '',
         role: '',
         phone: '',
         email: '',
@@ -33,16 +31,6 @@ const Registration = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        if (!formData.firstName.trim()) {
-            alert("First Name is required");
-            return;
-        }
-
-        if (!formData.lastName.trim()) {
-            alert("Last Name is required");
-            return;
-        }
 
         if (!formData.role) {
             alert("Role is required");
@@ -84,11 +72,19 @@ const Registration = () => {
                         event.preventDefault();
                         const formData = new FormData(event.currentTarget);
                         const formJson = Object.fromEntries(formData.entries());
-                        const username = formJson.firstName;
-                        const password = formJson.lastName;
+                        const username = formJson.username;
+                        const password = formJson.password;
                         const role = formJson.role;
                         const phone = formJson.phone;
                         const email = formJson.email;
+                        const driver = {
+                            name: username,
+                            emailAddress: email,
+                            password: password,
+                            role: role,
+                            phone: phone
+                        }
+                        addNewDriver(driver)
                         handleRegisterClose();
                     },
                 }}
@@ -102,26 +98,36 @@ const Registration = () => {
                         autoFocus
                         required
                         margin="dense"
-                        id="firstName"
-                        name="firstName"
-                        label="First Name"
+                        id="username"
+                        name="username"
+                        label="Username"
                         type="text"
                         fullWidth
                         variant="standard"
-                        onChange={(event) => setFormData({ ...formData, firstName: event.target.value })}
+                        onChange={(event) => setFormData({ ...formData, username: event.target.value })}
                     />
                     <TextField
                         required
                         margin="dense"
-                        id="lastName"
-                        name="lastName"
-                        label="Last Name"
-                        type="text"
+                        id="password"
+                        name="password"
+                        label="Password"
+                        type="password"
                         fullWidth
                         variant="standard"
-                        onChange={(event) => setFormData({ ...formData, lastName: event.target.value })}
+                        onChange={(event) => setFormData({ ...formData, password: event.target.value })}
                     />
-
+                    <TextField
+                        required
+                        margin="dense"
+                        id="email"
+                        name="email"
+                        label="Email"
+                        type="email"
+                        fullWidth
+                        variant="standard"
+                        onChange={(event) => setFormData({ ...formData, email: event.target.value })}
+                    />
                     <FormControl fullWidth required variant="standard">
                         <InputLabel id="role-label">Company Role</InputLabel>
                         <Select
@@ -146,28 +152,7 @@ const Registration = () => {
                         variant="standard"
                         onChange={(event) => setFormData({ ...formData, phone: event.target.value })}
                     />
-                    <TextField
-                        required
-                        margin="dense"
-                        id="email"
-                        name="email"
-                        label="Email"
-                        type="email"
-                        fullWidth
-                        variant="standard"
-                        onChange={(event) => setFormData({ ...formData, email: event.target.value })}
-                    />
-                    <TextField
-                        required
-                        margin="dense"
-                        id="password"
-                        name="password"
-                        label="Password"
-                        type="password"
-                        fullWidth
-                        variant="standard"
-                        onChange={(event) => setFormData({ ...formData, password: event.target.value })}
-                    />
+
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleRegisterClose}>Cancel</Button>

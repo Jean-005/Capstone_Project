@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Login = ({ drivers, handleUserLogin }) => {
+const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -86,7 +86,7 @@ const Login = ({ drivers, handleUserLogin }) => {
                     <Button variant="outlined" type="submit">Login</Button>
                 </form>
             </div>
-            <Registration />
+            <Registration addNewDriver = {addNewDriver}/>
         </div>
     );
 
