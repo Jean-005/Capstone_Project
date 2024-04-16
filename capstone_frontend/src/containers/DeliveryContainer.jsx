@@ -55,7 +55,6 @@ const DeliveryContainer = () => {
     }
 
     const postRoute = async () => {
-        const API_KEY = "665251c294434ee4b95eb20b18fd58ac";
         const agents = drivers.map((driver) => {
             return {
                 "start_location": driver.startLocation,
