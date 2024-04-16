@@ -28,9 +28,9 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        Driver jean = new Driver("Jean", "jean@test.com", "+44339284023", "Trolley", "JE08 ANN");
+        Driver jean = new Driver("Jean", "jean@test.com", "+44339284023", "Mercedes F1-Car", "JE08 ANN");
         driverRepository.save(jean);
-        Driver aebel = new Driver("Aebel", "aebelshajan.work@gmail.com", "+447577563733", "Clown Car", "AE16 BEL");
+        Driver aebel = new Driver("Aebel", "aebelshajan.work@gmail.com", "+447577563733", "Lightning McQueen Car", "AE16 BEL");
         driverRepository.save(aebel);
         Driver yesica = new Driver("Yesica", "yesica@test.com", "+44234234234", "Mercedes G-Wagon", "YE51 CCA");
         driverRepository.save(yesica);
