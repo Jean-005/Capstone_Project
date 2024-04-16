@@ -13,9 +13,7 @@ const maps = {
 
 const RouteDisplay = ({route}) => {
   const [map, setMap] = useState(null);
-  if(!route) {
-    return <p>Map loading</p>
-  }
+
   if(route.waypoints.length === 0) {
     return <p>Map loading</p>
   }
