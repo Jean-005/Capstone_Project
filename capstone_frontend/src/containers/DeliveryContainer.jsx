@@ -13,6 +13,9 @@ const DeliveryContainer = () => {
     const [routeFeatures, setRouteFeatures] = useState({});
     const [routes, setRoutes] = useState([]);
     const [completedOrders, setCompletedOrders] = useState(false);
+    // To Do: Remove this and store in routes
+    const [updatedRoutes, setUpdatesRoutes] = useState([]);
+
     useEffect(() => {
         fetchDrivers()
         fetchOrders()
@@ -94,7 +97,7 @@ const DeliveryContainer = () => {
         });
         const routesJson = await response.json();
         setRouteFeatures(routesJson);
-        const updatedRoutes = routesJson.features.map((feature) => {
+        const calculatedRoutes = routesJson.features.map((feature) => {
             // [ order1, order2] within one route
             return feature.properties.actions.reduce((reducer1, action) => {
                 if(action.type === "pickup"){
@@ -106,6 +109,7 @@ const DeliveryContainer = () => {
 
             }, [])
         })
+        setUpdatesRoutes(calculatedRoutes);
         // console.log(updatedRoutes)
         console.log(routesJson);
     }
@@ -126,7 +130,7 @@ const DeliveryContainer = () => {
                     path: "/driver",
                     element:
                         <>
-                            <RouteDisplay />
+                            <RouteDisplay routes={updatedRoutes}/>
                             <OrderList 
                             orders={orders}
                             completedOrders={completedOrders} 
