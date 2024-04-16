@@ -1,6 +1,13 @@
-const Profile = () => {
+const Profile = (driver) => {
+
     return (
-        <p>Profile:</p>
+        <>
+            <h3>My Profile</h3>
+            <p>{driver.name}</p>
+            <p>{driver.emailAddress}</p>
+            <p>{driver.phone}</p>
+
+        </>
     );
 }
 
