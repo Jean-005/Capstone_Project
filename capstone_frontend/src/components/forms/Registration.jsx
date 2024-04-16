@@ -47,8 +47,28 @@ const Registration = () => {
         if (!formData.role) {
             alert("Role is required");
             return;
-
         }
+
+        if (!formData.phone.trim()) {
+            alert("Phone Number is required");
+            return;
+        }
+
+        if (!formData.email.trim()) {
+            alert("Email is required");
+            return;
+        }
+
+        if (!formData.password.trim()) {
+            alert("Password is required");
+            return;
+        } else if (formData.password.length < 6) {
+            alert("Password must be at least 6 characters long");
+            return;
+        }
+
+        handleRegisterClose();
+    };
 
     return (
         <div>
