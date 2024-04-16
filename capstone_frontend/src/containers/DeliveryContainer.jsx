@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const DeliveryContainer = () => {
     const [drivers, setDrivers] = useState([]);
     const [orders, setOrders] = useState([]);
+    const [routeFeatures, setRouteFeatures] = useState({});
     const [routes, setRoutes] = useState([]);
     const [completedOrders, setCompletedOrders] = useState(false);
     useEffect(() => {
@@ -19,7 +20,7 @@ const DeliveryContainer = () => {
     }, []);
 
     useEffect(() => {
-        if (drivers.length > 0 && orders.length > 0) {
+        if (drivers.length > 0 && orders.length > 0 && Object.keys(routeFeatures).length === 0){
             postRoute()
         }
     }, [drivers, orders]);
@@ -54,7 +55,6 @@ const DeliveryContainer = () => {
     }
 
     const postRoute = async () => {
-        const API_KEY = "665251c294434ee4b95eb20b18fd58ac";
         const agents = drivers.map((driver) => {
             return {
                 "start_location": driver.startLocation,
@@ -85,7 +85,7 @@ const DeliveryContainer = () => {
                 }
             ]
         };
-        const response = await fetch(`https://api.geoapify.com/v1/routeplanner?apiKey=${API_KEY}`, {
+        const response = await fetch(`https://api.geoapify.com/v1/routeplanner?apiKey=${process.env.REACT_APP_API_KEY}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -93,6 +93,7 @@ const DeliveryContainer = () => {
             body: JSON.stringify(body)
         });
         const routesJson = await response.json();
+        setRouteFeatures(routesJson);
         const updatedRoutes = routesJson.features.map((feature) => {
             // [ order1, order2] within one route
             return feature.properties.actions.reduce((reducer1, action) => {
