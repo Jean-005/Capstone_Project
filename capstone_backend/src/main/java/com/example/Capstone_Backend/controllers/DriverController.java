@@ -34,6 +34,12 @@ public class DriverController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @PostMapping
+    public ResponseEntity <Driver> saveDriver(@RequestBody Driver driver){
+        Driver newDriver = driverService.saveDriver(driver);
+        return  new ResponseEntity<>(newDriver, HttpStatus.CREATED);
+    }
+
     @PutMapping(value = "/{id}")
     public ResponseEntity<Driver> updateDriverById(@PathVariable Long id, @RequestBody DriverDTO driverDTO){
         Optional<Driver> driver = driverService.getDriverById(id);
