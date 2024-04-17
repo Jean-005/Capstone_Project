@@ -12,6 +12,7 @@ const DeliveryContainer = () => {
     const [orders, setOrders] = useState([]);
     const [routes, setRoutes] = useState([]);
     const [currentUser, setCurrentUser] = useState(null);
+    const [currentDriverRoute, setCurrentDriverRoute] = useState([]);
 
     // Fetch the drivers and orders first
     useEffect(() => {
@@ -23,10 +24,10 @@ const DeliveryContainer = () => {
     // Then fetch the best routes from the geoApify api
     useEffect(() => {
         // Only fetch if drivers and orders are populated. Also no need to fetch more than once
-        if (drivers.length > 0 && orders.length > 0 && routes.length === 0) {
+        if (drivers.length > 0 && orders.length > 0 && routes.length === 0 && currentUser !== null) {
             fetchBestRoutes();
         }
-    }, [drivers, orders]);
+    }, [drivers, orders, currentUser]);
 
     // Drivers
     const fetchDrivers = async () => {
@@ -163,8 +164,22 @@ const DeliveryContainer = () => {
             return routeObject
         });
         setRoutes(calculatedRouteObjects);
-        return calculatedRouteObjects;
     }
+
+    const handleRouteSelection = () => {
+        routes.map((route) => {
+            if(route.driver.id === currentUser.id){
+                setCurrentDriverRoute(route)
+
+            }
+        })
+    }
+
+    useEffect(()=> {
+        if(routes.length > 0 && currentUser !== null){
+            handleRouteSelection();
+        }
+    }, [routes])
 
     // React routing
     const deliveryRoutes = createBrowserRouter([
@@ -194,7 +209,7 @@ const DeliveryContainer = () => {
                                     // We can replace the 0 with an index i depending on current user signed in
                                 }
                                 <RouteDisplay 
-                                    route={routes[0]}
+                                    route={currentDriverRoute}
                                     currentUser={currentUser}
                                 />
                                 <OrderList orders={routes[0].orders} />
