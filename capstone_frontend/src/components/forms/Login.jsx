@@ -92,6 +92,9 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
             </div>
             
         </div>
+        <footer className="footer">
+        <p>&copy; 2024 Help Desk Inc.   Your privacy and security are important to us. For more information on how we use your data read our privacy policy</p>
+  </footer>
         </>
     );
 
