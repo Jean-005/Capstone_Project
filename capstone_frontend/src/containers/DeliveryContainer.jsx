@@ -10,23 +10,23 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const DeliveryContainer = () => {
     const [drivers, setDrivers] = useState([]);
     const [orders, setOrders] = useState([]);
+    const [routeFeatures, setRouteFeatures] = useState({});
     const [routes, setRoutes] = useState([]);
-    const [currentUser, setCurrentUser] = useState(null);
+    const [currentUser, setCurrentUser] = useState([]);
 
-    // Fetch the drivers and orders first
     useEffect(() => {
         fetchDrivers()
         fetchOrders()
-        // fetchRoutes() // Not really needed now
+        fetchRoutes()
     }, []);
 
-    // Then fetch the best routes from the geoApify api
-    useEffect(() => {
-        // Only fetch if drivers and orders are populated. Also no need to fetch more than once
-        if (drivers.length > 0 && orders.length > 0 && routes.length === 0) {
-            fetchBestRoutes();
-        }
-    }, [drivers, orders]);
+    // useEffect(() => {
+    //     if (drivers.length > 0 && orders.length > 0 && Object.keys(routeFeatures).length === 0){
+    //         postRoute()
+    //     }
+    // }, [drivers, orders]);
+
+    // React Hook useEffect has a missing dependency: 'postRoute'. Either include it or remove the dependency array.
 
     // Drivers
     const fetchDrivers = async () => {
@@ -71,9 +71,7 @@ const DeliveryContainer = () => {
         setRoutes(routesJson);
     }
 
-    // Geoapify
-    // Fetch the optimised routes given an array of drivers and orders
-    const fetchFromGeoApify = async () => {
+    const postRoute = async () => {
         const agents = drivers.map((driver) => {
             return {
                 "start_location": driver.startLocation,
@@ -104,69 +102,31 @@ const DeliveryContainer = () => {
                 }
             ]
         };
-        const response = await fetch(
-            `https://api.geoapify.com/v1/routeplanner?apiKey=${process.env.REACT_APP_API_KEY}`,
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(body)
-            }
-        );
-        const responseJson = await response.json();
-        return responseJson;
-    }
-
-    // Returns a list of route objects
-    const fetchBestRoutes = async () => {
-        const responseJson = await fetchFromGeoApify();
-        const calculatedRouteObjects = responseJson.features.map((feature) => {
-            const waypoints = feature.properties.waypoints;
-            const actions = feature.properties.actions;
-
-            // Getting all locations
-            let routeWaypoints = [];
-            for (let i = 0; i < waypoints.length; i++) {
-                const waypoint = waypoints[i];
-                routeWaypoints.push(waypoint.location);
-            }
-            // Getting all orders
-            let routeOrders = [];
-            for (let i = 0; i < actions.length; i++) {
-                const action = actions[i];
-                // Goes through each action and
-                if (action.type === "pickup") {
-                    routeOrders.push(
-                        orders.find(
-                            order => order.id === parseInt(action.shipment_id)
-                        )
-                    )
-                }
-            }
-            // Getting driver
-            let driver = drivers[feature.properties.agent_index]; // assume order is same ??
-            // Getting duration
-            let duration = feature.properties.time;
-            // Getting  distance
-            let distance = feature.properties.distance;
-
-            // Combine them into a route object
-            const routeObject = {
-                orders: routeOrders,
-                //v We can calculate this using order pickup and drop off locations and driver start location
-                waypoints: routeWaypoints, // stays for now, remove later on or we can add it to backend.
-                driver: driver,
-                distance: distance,
-                duration: duration
-            }
-            return routeObject
+        const response = await fetch(`https://api.geoapify.com/v1/routeplanner?apiKey=${process.env.REACT_APP_API_KEY}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
         });
-        setRoutes(calculatedRouteObjects);
-        return calculatedRouteObjects;
+        const routesJson = await response.json();
+        setRouteFeatures(routesJson);
+        const updatedRoutes = routesJson.features.map((feature) => {
+            // [ order1, order2] within one route
+            return feature.properties.actions.reduce((reducer1, action) => {
+                if(action.type === "pickup"){
+                    const filteredOrders = orders.filter((order)=>{if(order.id == action.shipment_id){return order}});
+                    return [...reducer1, ...filteredOrders];
+                } else{
+                    return [...reducer1];
+                }
+
+            }, [])
+        })
+        // console.log(updatedRoutes)
+        console.log(routesJson);
     }
 
-    // React routing
     const deliveryRoutes = createBrowserRouter([
         {
             path: "/",
@@ -176,6 +136,7 @@ const DeliveryContainer = () => {
                 handleUserLogin={handleUserLogin}
                 addNewDriver = {addNewDriver}
                 />
+
         },
         {
             path: "/driver",
@@ -185,32 +146,39 @@ const DeliveryContainer = () => {
                 {
                     path: "/driver",
                     element:
-                        // Instead of doing conditional rendering we could maybe store all this in a page container?
-                        routes.length === 0 ?
-                            <p>Loading routes...</p>
-                            :
-                            <>
-                                {
-                                    // We can replace the 0 with an index i depending on current user signed in
-                                }
-                                <RouteDisplay 
-                                    route={routes[0]}
-                                    currentUser={currentUser}
-                                />
-                                <OrderList orders={routes[0].orders} />
-                            </>
-
+                        <>
+                            <RouteDisplay 
+                            currentUser={currentUser}/>
+                            <OrderList 
+                            orders={orders}
+                            />
+                        </>
                 },
                 {
                     path: "/driver/profile",
                     element:
-                        <Profile drivers={drivers} />
+                        <Profile 
+                        driver={currentUser}
+                        
+                        />
                 }
             ]
         }
+
     ]);
 
-    return (<RouterProvider router={deliveryRoutes} />);
+    return (
+        <>
+            <p>Delivery Container</p>
+            {/* <Navigation />
+            <OrderList />
+            <Login />
+            <Profile />
+            // <RouteDisplay /> */}
+            <RouterProvider router={deliveryRoutes} />
+
+        </>
+    );
 }
 
 export default DeliveryContainer;
