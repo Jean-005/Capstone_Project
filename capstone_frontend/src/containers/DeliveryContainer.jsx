@@ -11,6 +11,7 @@ const DeliveryContainer = () => {
     const [drivers, setDrivers] = useState([]);
     const [orders, setOrders] = useState([]);
     const [routes, setRoutes] = useState([]);
+    const [currentUser, setCurrentUser] = useState(null);
 
     // Fetch the drivers and orders first
     useEffect(() => {
@@ -34,6 +35,22 @@ const DeliveryContainer = () => {
         });
         const driversJson = await response.json();
         setDrivers(driversJson);
+    }
+
+    const addNewDriver = async (driver) => {
+        const response = await fetch("http://localhost:8080/drivers", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(driver)
+        });
+        const driversJson = await response.json();
+        setDrivers([...drivers, driversJson]);
+    }
+
+    const handleUserLogin = (user) => {
+        setCurrentUser(user)
     }
 
     // Orders
@@ -154,7 +171,11 @@ const DeliveryContainer = () => {
         {
             path: "/",
             element:
-                <Login />
+                <Login 
+                drivers={drivers}
+                handleUserLogin={handleUserLogin}
+                addNewDriver = {addNewDriver}
+                />
         },
         {
             path: "/driver",
@@ -172,10 +193,12 @@ const DeliveryContainer = () => {
                                 {
                                     // We can replace the 0 with an index i depending on current user signed in
                                 }
-                                <RouteDisplay route={routes[0]} />
+                                <RouteDisplay 
+                                    route={routes[0]}
+                                    currentUser={currentUser}
+                                />
                                 <OrderList orders={routes[0].orders} />
                             </>
-
 
                 },
                 {

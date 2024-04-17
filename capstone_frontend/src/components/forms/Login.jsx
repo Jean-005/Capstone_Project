@@ -4,9 +4,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
 
-
-const Login = () => {
-
+const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         username: '',
@@ -34,13 +33,16 @@ const Login = () => {
         return;
     }
 
+    if (driverExistence !== -1 && passwordExistence !== -1) {
+        handleUserLogin(currentDriver);
+        navigate("/driver")
+    }
+      
     if (password.length < 6) {
         alert("Password must be at least 6 characters long");
         return;
     }
-
-    console.log(username);
-    console.log(password);
+      
 };
 
     return (
@@ -75,7 +77,7 @@ const Login = () => {
                     <Button variant="outlined" type="submit">Login</Button>
                 </form>
             </div>
-            <Registration />
+            <Registration addNewDriver = {addNewDriver}/>
         </div>
     );
 
