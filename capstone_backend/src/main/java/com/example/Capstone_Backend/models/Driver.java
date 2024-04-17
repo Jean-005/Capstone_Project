@@ -38,9 +38,12 @@ public class Driver {
     @Column
     private String licensePlateNumber;
 
+    @Column
+    private String password;
+
     public Driver(){}
 
-    public Driver(String name, String emailAddress, String phone, String vehicleType, String licensePlateNumber) {
+    public Driver(String name, String emailAddress, String phone, String vehicleType, String licensePlateNumber, String password) {
         this.name = name;
         this.emailAddress = emailAddress;
         this.phone = phone;
@@ -48,6 +51,7 @@ public class Driver {
         this.startLocation = Arrays.asList(-0.140634, 51.501476);
         this.vehicleType = vehicleType;
         this.licensePlateNumber = licensePlateNumber;
+        this.password = password;
     }
 
     public long getId() {
@@ -112,5 +116,13 @@ public class Driver {
 
     public void setLicensePlateNumber(String licensePlateNumber) {
         this.licensePlateNumber = licensePlateNumber;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
