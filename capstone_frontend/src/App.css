@@ -36,13 +36,59 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.company-name {
-  font-family: 'Banner', sans-serif ;
+.branded-name {
+  font-family: 'Banner', sans-serif;
   letter-spacing: 10px;
   color: white;
+}
+
+.branded-container {
+  background-color: white;
+  border: solid rgba(250, 150, 150, 0.553) 1px;
+  border-radius: 10px;
+  padding: 60px;
+}
+
+.branded-page {
+  background-color: rgb(244, 238, 238);
+  padding: 3rem;
+}
+
+* {
+  --background-size: 640px;
+}
+
+/* yae or nae */
+
+.branded-page {
+  box-sizing: border-box;
+  margin:0;
+  height: 100vh;
+  background-image: 
+    url(https://st4.depositphotos.com/3916541/21908/v/450/depositphotos_219088728-stock-illustration-silver-outline-square-pattern-vector.jpg);
+    /* url(https://cdn.pixabay.com/photo/2012/04/10/16/59/pattern-26414_1280.png); */
+    /* url(https://www.graphicpear.com/wp-content/uploads/2022/10/Cube-3D-Seamless-Pattern-.png); */
+  background-size: var(--background-size);
+  background-color: #f0e2e20d; 
+  background-blend-mode: difference;
+  display: grid;
+  place-items: center;
+  animation: movingBackground 50s linear infinite;
+}
+
+.branded-page:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+@keyframes movingBackground {
+  from { background-position: 0 0;}
+  to {background-position: var(--background-size) var(--background-size);}
 }

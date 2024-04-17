@@ -1,25 +1,22 @@
-h2 {
-    text-align: center;
-    margin: 0;
-    font-size: 40px;
-    color: #F22222;
-}
-
-#account-login {
-
-    text-align: left;
-    padding-bottom: 1.5rem;
-}
-
 
 #login-page {
-    background-color: rgb(244, 238, 238);
-    min-height: 100vh;
-    font-size: calc(10px + 2vmin);
-    color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#account-login {
+    color:#F22222;
+    text-align: left;
+    padding-bottom: 1.5rem;
+    font-size: 2rem ;
+    margin: 0;
 }
 
+
 #login-header {
+    position: fixed;
+    width: 100%;
     display: flex;
     height: 15vh;
     justify-content: center;
@@ -32,16 +29,13 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
 }
 
 #login-container {
     background-color: white;
-    /* box-shadow: 0px 2px 5px 0px rgb(129, 125, 125); */
     border: solid rgba(250, 150, 150, 0.553) 1px;
     border-radius: 10px;
     padding: 60px;
-
 }
 
 #login-form-container {

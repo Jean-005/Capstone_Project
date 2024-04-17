@@ -1,32 +1,48 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Profile.css";
 
-const Profile = ({driver, currentUser}) => {
+const Profile = ({ driver, currentUser }) => {
 
     const navigate = useNavigate();
 
-    useEffect (() => {
+    useEffect(() => {
         if (currentUser === null) {
             navigate("/");
-           }
+        }
     }, []);
 
     return (
-        currentUser ? (
-            <>
-            <h2>My Profile</h2>
-            
-            <h4>My Details</h4>
-            <p>{driver.name}</p>
-            <p>{driver.emailAddress}</p>
-            <p>{driver.phone}</p>
+        <div id="profile-page-container" className="branded-page">
+            {currentUser
+                ?
+                <div id="profile-container" className="branded-container">
+                    <h1 id="profile-title">My Profile</h1>
+                    <div className="branded-container profile-detail-container">
+                        <h1>My Details</h1>
+                        <div className="profile-details">
+                            <p>{driver.name}</p>
+                            <p>{driver.emailAddress}</p>
+                            <p>{driver.phone}</p>
+                        </div>
+                    </div>
+                    <div className="branded-container profile-detail-container">
 
-            <h4>My Vehicle</h4>
-            <p>{driver.vehicleType}</p>
-            <p>{driver.licensePlateNumber}</p>
+                        <h1>My Vehicle</h1>
+                        <div className="profile-details">
+                            <p>{driver.vehicleType}</p>
+                            <p>{driver.licensePlateNumber}</p>
+                        </div>
 
-        </> ) : (<p>Please Login</p>)
-        
+                    </div>
+                </div>
+
+                :
+
+                <h1 className="branded-container" >Please Login</h1>
+
+            }
+        </div>
     );
 }
 
