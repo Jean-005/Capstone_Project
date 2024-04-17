@@ -4,33 +4,79 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#F22222', // red
+      main: '#F22222',
     },
     secondary: {
-      main: '#FF5733', // lighter red
+      main: '#FFC7C2',
     },
-
   },
+  typography: {
+    fontFamily: 'Poppins, sans-serif',
+    fontSize: 16,
+  },
+  spacing: 8,
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 10,
-          padding: '10px 36px',
+          textTransform: 'none',
+          padding: '12px 24px',
+          borderRadius: 4,
+          fontSize: 16,
+          fontWeight: 'bold',
+          '&:hover': {
+            backgroundColor: '#F22222',
+            color: '#fff',
+          },
         },
       },
     },
-  },
-  typography: {
-    fontFamily: 'Roboto, sans-serif',
-    fontSize: 16,
-    fontWeightLight: 300,
-    fontWeightRegular: 400,
-    fontWeightMedium: 500,
-    fontWeightBold: 700,
-  },
-});
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: 'transparent',
+            color: '#fff',
+          },
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          '& label.Mui-focused': {
+            color: '#ff5722',
+          },
+          '& .MuiInput-underline:after': {
+            borderBottomColor: '#ff5722',
+          },
+          '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+              borderColor: '#ccc',
+            },
+            '&:hover fieldset': {
+              borderColor: '#ff5722',
+            },
+            '&.Mui-focused fieldset': {
+              borderColor: '#ff5722',
+            },
+          },
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          height: '8vh',
+          boxShadow: 'none',
+          padding: 'none'
+        },
+      },
+    },
+    
 
+  }
+});
 
 function App() {
   return (
