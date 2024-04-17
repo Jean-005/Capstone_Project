@@ -15,7 +15,6 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { createTheme } from '@mui/material/styles';
-import "./Navigation.css";
 
 
 const Navigation = ( {currentUser} ) => {
@@ -53,7 +52,7 @@ const Navigation = ( {currentUser} ) => {
 
     return (
         <>
-            <AppBar position="static" id="AppBar">
+            <AppBar position="static">
                 <Container maxWidth="xl">
                     <Toolbar >
                         <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
