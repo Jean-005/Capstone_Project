@@ -1,6 +1,15 @@
+h2 {
+text-align: center;
+margin-bottom: 40px;
+margin-top: 50px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 40px;
+}
+
+
 #login-page {
     background-color: rgb(244, 238, 238);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'BANNER', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,12 +22,22 @@
 
 #login-container {
     background-color: #FFC7C2;
-    box-shadow:  0px 5px 10px 0px  rgb(129, 125, 125);
+    box-shadow: 0px 5px 10px 0px rgb(129, 125, 125);
     border-radius: 4px;
     padding: 60px;
     width: 40%;
     height: 350px;
     text-align: center;
     border-radius: 20px;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+    
+#login-container button {
+    text-align: center;
+  display: inline-block;
+  margin-right: 5px;
+}
+
 

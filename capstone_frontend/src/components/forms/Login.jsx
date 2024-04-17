@@ -56,6 +56,8 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
     };
 
     return (
+        <>
+        <h2>Jeanius Delivery</h2>
         <div id="login-page">
             <div id="login-container">
                 <h2>Login Form:</h2>
@@ -90,6 +92,7 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
             </div>
             
         </div>
+        </>
     );
 
 };
