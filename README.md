@@ -140,9 +140,9 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 
 ### Credits and Acknowledgements - The Jeanius ReactAebels:
 
-|    |  Name    |         Github                   |
+|  👁️  |  Name    |         Github                   |
 |----|----------|--------------------------------- |
-|    | Aebel    | https://github.com/Aebel-Shajan  |
+|  👨‍🚀  | Aebel    | https://github.com/Aebel-Shajan  |
 |    | Jean     | https://github.com/Jean-005      |
 |    | Sahil    | https://github.com/sahilpatel1906|
 |    | Yesica   | https://github.com/ney601        |
