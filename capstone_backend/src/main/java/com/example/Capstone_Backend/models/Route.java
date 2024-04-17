@@ -2,6 +2,7 @@ package com.example.Capstone_Backend.models;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -33,8 +34,8 @@ public class Route {
 
     public Route(){}
 
-    public Route(List<Order> orders, Driver driver, int distance, int duration){
-        this.orders = orders;
+    public Route(Driver driver, int distance, int duration){
+        this.orders = new ArrayList<>();
         this.driver = driver;
         this.distance = distance;
         this.duration = duration;

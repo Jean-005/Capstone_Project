@@ -42,21 +42,28 @@ public class DataLoader implements ApplicationRunner {
         List<Double> pickupGeocode = Arrays.asList(-0.140634, 51.501476);
         String pickupLocation = "Buckingham Palace, London, SW1A 1AA";
 
+        Route route1 = new Route( aebel, 100, 180);
+        routeRepository.save(route1);
+        Route route2 = new Route( jean, 60, 120);
+        routeRepository.save(route2);
+
         Order order1 = new Order(349823,pickupLocation ,"Great Russell St, London WC1B 3DG", pickupGeocode, Arrays.asList(-0.12724418034731264,51.51920852847477));
+        order1.setRoute(route1);
         orderRepository.save(order1);
         Order order2 = new Order(543553,pickupLocation ,"London Zoo, Outer Cir, London NW1 4RY", pickupGeocode , Arrays.asList(-0.15480659230689, 51.53480565));
+        order2.setRoute(route1);
         orderRepository.save(order2);
         Order order3 = new Order(234523,pickupLocation ,"Cross Bones Garden, Union St, London,  SE1 1TA", pickupGeocode , Arrays.asList(-0.0919393, 51.503344));
+        order3.setRoute(route1);
         orderRepository.save(order3);
         Order order4 = new Order(342323,pickupLocation , "32 London Bridge St, London SE1 9SG, United Kingdom", pickupGeocode , Arrays.asList(-0.0864458928542395, 51.5043421));
+        order4.setRoute(route2);
         orderRepository.save(order4);
         Order order5 = new Order(776543,pickupLocation ,"Royal Albert Hall, Kensington Gore, South Kensington, London SW7 2AP", pickupGeocode , Arrays.asList(-0.177498, 51.500942));
+        order5.setRoute(route2);
         orderRepository.save(order5);
 
-        Route route1 = new Route(Arrays.asList(order1, order2, order3), aebel, 100, 180);
-        routeRepository.save(route1);
-        Route route2 = new Route(Arrays.asList(order4, order5), jean, 60, 120);
-        routeRepository.save(route2);
+
 
     }
 }
