@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Capstone_Project</h1>Capstone_Project
+<h1 align="center" id="title">Capstone_Project</h1>
 
 ## Table of Contents
 1. [Project Description](#project-description)
@@ -11,6 +11,23 @@
 
 ## Project Description
 
+This full-stack project utilised...
+
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+<br /> 
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
 
 **The names and versions of libraries used:**
@@ -57,14 +74,17 @@
 
 ### Wireframe
 
-
+![Capstone_Wireframe](https://github.com/Jean-005/Capstone_Project/assets/132017960/5068cc4a-ef31-493a-b3c4-e4c41148144b)
 ### Entity Relationship Diagrams
 
 
 ### Component diagram
 
+![Screenshot 2024-04-17 at 09 01 19](https://github.com/Jean-005/Capstone_Project/assets/132017960/de006a71-f33b-4916-abe8-145f9afc579e)
+
 
 ### Usage
+
 
 
 ### The URL of the deployed website:
@@ -81,32 +101,66 @@
 
 - Install Postman, Postico, PostgreSQL and your preferred IDE.
 - In terminal or Gitbash, navigate to the directory you want to copy the repository into. 
-- Run the command ```git clone ```
-- In the terminal or Gitbash, create the database called cinemavericks_db by running the command ```createdb ```.
+- Run the command ```git clone git@github.com:Jean-005/Capstone_Project.git```
+- In the terminal or Gitbash, create the database called delivery_db by running the command ```createdb delivery_db```.
 - In the terminal run the command ```./mvnw spring-boot:run```
 
 
 
 **Client-side**
 
-- Install Node.js ...
+- Install Node.js and npm.
 - In terminal or Gitbash, navigate to the directory you want to copy the repository into. 
-- Run the command ```git clone git@github.com:
+- Run the command ```git clone git@github.com:Jean-005/Capstone_Project.git
 - Run the command **git pull** to ensure you have the latest version.
 - Open the react project in the preferred IDE such as Visual Studio Code.
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
 
+- ## Contributing Instructions
 
-### Credits and Acknowledgements
+We appreciate your interest in contributing to the Capstone Project. We welcome contributions of all kinds, from bug reports and documentation improvements to new features and code changes.
 
-|    |  Name   |         Github                   |
-|----|---------|--------------------------------- |
-|    | Aebel   | https://github.com/Aebel-Shajan  |
-|    | Jean    | https://github.com/Jean-005      |
-|    | Sahil   | https://github.com/sahilpatel1906|
-|    | Yesica  | https://github.com/ney601        |
-|    | Tommy   | https://github.com/Tommybui28    |
+Find below our contributing guidelines. By following these guidelines, you'll help us to maintain a high quality codebase and make the review process smoother for everyone.
+
+**1. Fork the Repository:** Create a fork of the Capstone Project repository on GitHub.
+
+**2. Create a Branch:** Clone the forked repository to your local machine & create a new branch for your contribution.
+
+**3.Make Changes:** Make your changes to the code & ensure your changes follow our coding style.
+
+**4. Commit Your Changes:** Commit your changes to your local branch with a descriptive commit message.
+
+**5. Push Your Changes:** Push your changes to your forked repository on GitHub.
+     
+**6. Create a Pull Request:** Open a pull request from your branch to the main branch of the upstream repository.
+
+**7. Review and Feedback:** We will review your pull request and provide feedback.
+
+
+
+### Credits and Acknowledgements - The Jeanius ReactAebels:
+
+|  👁️  |  Name    |         Github                   |
+|----|----------|--------------------------------- |
+|  👨‍🚀  | Aebel    | https://github.com/Aebel-Shajan  |
+|    | Jean     | https://github.com/Jean-005      |
+|    | Sahil    | https://github.com/sahilpatel1906|
+|    | Yesica   | https://github.com/ney601        |
+|    | Tommy    | https://github.com/Tommybui28    |
 
 ### Resources
 
-### Licenses
+### Special thanks to:
+
+- Anna Henderson
+- Colin Farquhar
+- Richard Sneyd
+- Thibyaa Mahasivam
+- Zsolt Podoba-Szalai
+
+**For their invaluable guidance and assistance with this project.**
+
+
+## Licences
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
