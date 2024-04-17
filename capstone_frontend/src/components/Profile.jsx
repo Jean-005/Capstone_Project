@@ -1,4 +1,4 @@
-const Profile = (driver) => {
+const Profile = ({driver}) => {
 
     return (
         <>
