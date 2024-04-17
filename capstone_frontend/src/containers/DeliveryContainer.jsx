@@ -52,6 +52,19 @@ const DeliveryContainer = () => {
         setDrivers([...drivers, driversJson]);
     }
 
+    const postRoutes = async (routeDTO) => {
+        const response = await fetch("http://localhost:8080/routes", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(routeDTO)
+        });
+        const routeJSON = await response.json();
+        return routeJSON;
+    }
+
+
     const handleUserLogin = (user) => {
         setCurrentUser(user)
     }
@@ -166,6 +179,17 @@ const DeliveryContainer = () => {
             return routeObject
         });
         setRoutes(calculatedRouteObjects);
+        const responses = calculatedRouteObjects.map((route)=> {
+            const orderIds = route.orders.map((order)=>{return order.id})
+            const routeDTO = {
+                orderIds: orderIds,
+                driverId: route.driver.id,
+                distance: route.distance,
+                duration: route.duration
+            }
+            return postRoutes(routeDTO);
+        })
+        console.log(responses)
     }
 
     const handleRouteSelection = () => {
