@@ -21,6 +21,7 @@ const DeliveryContainer = () => {
         // fetchRoutes() // Not really needed now
     }, []);
 
+   
     // Then fetch the best routes from the geoApify api
     useEffect(() => {
         // Only fetch if drivers and orders are populated. Also no need to fetch more than once
@@ -195,7 +196,7 @@ const DeliveryContainer = () => {
         {
             path: "/driver",
             element:
-                <Navigation />,
+                <Navigation currentUser={currentUser}/>,
             children: [
                 {
                     path: "/driver",
@@ -221,6 +222,7 @@ const DeliveryContainer = () => {
                     element:
                     <Profile 
                     driver={currentUser}
+                    currentUser={currentUser}
                     />
                 }
             ]

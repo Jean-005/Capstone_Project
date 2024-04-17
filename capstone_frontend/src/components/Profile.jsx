@@ -1,7 +1,19 @@
-const Profile = ({driver}) => {
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+const Profile = ({driver, currentUser}) => {
+
+    const navigate = useNavigate();
+
+    useEffect (() => {
+        if (currentUser === null) {
+            navigate("/");
+           }
+    }, []);
 
     return (
-        <>
+        currentUser ? (
+            <>
             <h2>My Profile</h2>
             
             <h4>My Details</h4>
@@ -13,7 +25,8 @@ const Profile = ({driver}) => {
             <p>{driver.vehicleType}</p>
             <p>{driver.licensePlateNumber}</p>
 
-        </>
+        </> ) : (<p>Please Login</p>)
+        
     );
 }
 

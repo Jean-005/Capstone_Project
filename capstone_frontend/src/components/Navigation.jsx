@@ -13,8 +13,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Outlet, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
-const Navigation = () => {
+const Navigation = ( {currentUser} ) => {
 
     const pages = ['Profile', 'Routes', 'Help'];
     const pagesRoutes = ['profile', '', 'help'];
@@ -39,6 +40,12 @@ const Navigation = () => {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+
+    useEffect (() => {
+        if (currentUser === null) {
+            navigate("/");
+           }
+    }, []);
 
     return (
         <>
