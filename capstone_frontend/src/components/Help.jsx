@@ -2,7 +2,7 @@ import { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-const Help = ({}) => {
+const Help = ({currentUser}) => {
 
     const [formData, setFormData] = useState({
         problem: '',
@@ -18,9 +18,15 @@ const Help = ({}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const { problem, descritption } = formData;
-
-
+        const { problem, description } = formData;
+        const complaint = {
+            userId: currentUser.id,
+            name: currentUser.name,
+            problem: problem,
+            description: description
+        }
+    alert(`Your complaint has been successfully logged.`);
+    console.log(complaint);
     };
 
     return (

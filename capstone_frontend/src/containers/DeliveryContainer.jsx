@@ -229,7 +229,7 @@ const DeliveryContainer = () => {
                 {
                     path: "/driver/help",
                     element:
-                    <Help />
+                    <Help currentUser={currentUser}/>
                 }
             ]
         }
