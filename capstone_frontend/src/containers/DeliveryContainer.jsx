@@ -204,7 +204,9 @@ const DeliveryContainer = () => {
                 {
                     path: "/driver/profile",
                     element:
-                        <Profile drivers={drivers} />
+                    <Profile 
+                    driver={currentUser}
+                    />
                 }
             ]
         }
