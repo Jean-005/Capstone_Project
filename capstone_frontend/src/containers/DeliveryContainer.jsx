@@ -5,6 +5,7 @@ import RouteDisplay from "../components/RouteDisplay";
 import Login from "../components/forms/Login";
 import OrderList from "../components/lists/OrderList";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Help from "../components/Help";
 
 
 const DeliveryContainer = () => {
@@ -224,6 +225,11 @@ const DeliveryContainer = () => {
                     driver={currentUser}
                     currentUser={currentUser}
                     />
+                },
+                {
+                    path: "/driver/help",
+                    element:
+                    <Help />
                 }
             ]
         }
