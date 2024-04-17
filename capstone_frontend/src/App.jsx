@@ -16,9 +16,15 @@ const theme = createTheme({
   },
   spacing: 8,
   components: {
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
+          transition: 'none',
           textTransform: 'none',
           padding: '12px 24px',
           borderRadius: 4,
