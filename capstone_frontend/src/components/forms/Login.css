@@ -1,47 +1,79 @@
 h2 {
     text-align: center;
-    margin-bottom: 40px;
-    margin-top: 50px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
     font-size: 40px;
+    color: #F22222;
+}
+
+#account-login {
+
+    text-align: left;
+    padding-bottom: 1.5rem;
 }
 
 
 #login-page {
     background-color: rgb(244, 238, 238);
-    font-family: 'BANNER', sans-serif;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-size: calc(10px + 2vmin);
     color: black;
+}
 
+#login-header {
+    display: flex;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #F22222;
+    color: white;
+}
+
+#login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
 
 #login-container {
-    background-color: #FFC7C2;
-    box-shadow: 0px 5px 10px 0px rgb(129, 125, 125);
-    border-radius: 4px;
+    background-color: white;
+    /* box-shadow: 0px 2px 5px 0px rgb(129, 125, 125); */
+    border: solid rgba(250, 150, 150, 0.553) 1px;
+    border-radius: 10px;
     padding: 60px;
-    width: 40%;
-    height: 350px;
-    text-align: center;
-    border-radius: 20px;
+
+}
+
+#login-form-container {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+#login-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 #login-container button {
     text-align: center;
     display: inline-block;
-    margin-right: 5px;
+    width: 10rem;
 }
+
+a {
+    font-size: 1rem;
+    color: #F22222;
+    font-weight: bold;
+}
+
+
 
 .button {
     display: inline-block; 
-    margin: 5px; 
 }
 
 .footer {
@@ -53,5 +85,4 @@ h2 {
     padding: 10px;
     background-color: #333;
     color: #fff;
-    
-  }
+}

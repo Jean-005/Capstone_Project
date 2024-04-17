@@ -10,10 +10,6 @@ const theme = createTheme({
       main: '#FFC7C2',
     },
   },
-  typography: {
-    fontFamily: 'Poppins, sans-serif',
-    fontSize: 16,
-  },
   spacing: 8,
   components: {
     MuiButtonBase: {
@@ -73,7 +69,6 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          height: '8vh',
           boxShadow: 'none',
           padding: 'none'
         },
