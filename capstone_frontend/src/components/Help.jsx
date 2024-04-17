@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import "./Help.css";
 
 const Help = ({currentUser}) => {
 
@@ -30,15 +31,14 @@ const Help = ({currentUser}) => {
     };
 
     return (
-        <div>
-
-<>
+        <div className="help-container">
+        <div className="contact-info">
             <h2>Contact Us:</h2>
             <p>Email: JeaniusReactAebels@fakeEmail.com</p>
             <p>Phone: 032484092</p>
             <p>Address: 80 Middlesex Street, London, E1 7EZ</p>
-        </>
-            <div>
+        </div>
+            <div className="complaint-form">
                 <h2>Complaint Form:</h2>
                 <form onSubmit={handleSubmit}>
                     <TextField
@@ -68,6 +68,9 @@ const Help = ({currentUser}) => {
                     <Button variant="outlined" type="submit">Submit</Button>
                 </form>
             </div>
+            <footer className="footer">
+                <p>&copy; 2024 Help Desk Inc.</p>
+            </footer>
         </div>
     );
 
