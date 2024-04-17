@@ -1,6 +1,7 @@
 package com.example.Capstone_Backend.controllers;
 
 import com.example.Capstone_Backend.models.Route;
+import com.example.Capstone_Backend.models.RouteDTO;
 import com.example.Capstone_Backend.services.RouteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,8 +36,8 @@ public class RouteController {
         }
     }
     @PostMapping
-    public ResponseEntity<Route> saveRoute(@RequestBody Route route){
-        Route newRoute = routeService.saveRoute(route);
+    public ResponseEntity<Route> saveRoute(@RequestBody RouteDTO routeDTO){
+        Route newRoute = routeService.saveRoute(routeDTO);
         return new ResponseEntity<>(newRoute, HttpStatus.CREATED);
     }
 }
