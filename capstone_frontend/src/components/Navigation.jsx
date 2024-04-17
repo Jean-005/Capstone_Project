@@ -14,8 +14,12 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { createTheme } from '@mui/material/styles';
+import "./Navigation.css";
+
 
 const Navigation = ( {currentUser} ) => {
+
 
     const pages = ['Profile', 'Routes', 'Help'];
     const pagesRoutes = ['profile', '', 'help'];
@@ -49,9 +53,9 @@ const Navigation = ( {currentUser} ) => {
 
     return (
         <>
-            <AppBar position="static">
+            <AppBar position="static" id="AppBar">
                 <Container maxWidth="xl">
-                    <Toolbar disableGutters>
+                    <Toolbar >
                         <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                         <Typography
                             variant="h6"
@@ -142,7 +146,7 @@ const Navigation = ( {currentUser} ) => {
 
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
-                                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} id="IconButton">
                                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                                 </IconButton>
                             </Tooltip>
