@@ -3,6 +3,7 @@ import Registration from "./Registration";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 
 
@@ -55,8 +56,8 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
     };
 
     return (
-        <div>
-            <div>
+        <div id="login-page">
+            <div id="login-container">
                 <h2>Login Form:</h2>
                 <form onSubmit={handleSubmit}>
                     <TextField
@@ -85,8 +86,9 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
                     />
                     <Button variant="outlined" type="submit">Login</Button>
                 </form>
+                <Registration addNewDriver = {addNewDriver}/>
             </div>
-            <Registration addNewDriver = {addNewDriver}/>
+            
         </div>
     );
 
