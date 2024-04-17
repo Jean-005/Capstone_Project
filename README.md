@@ -100,16 +100,29 @@
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
 
 
-### Credits and Acknowledgements
+### Credits and Acknowledgements - The Jeanius ReactAebels:
 
-|    |  Name   |         Github                   |
-|----|---------|--------------------------------- |
-|    | Aebel   | https://github.com/Aebel-Shajan  |
-|    | Jean    | https://github.com/Jean-005      |
-|    | Sahil   | https://github.com/sahilpatel1906|
-|    | Yesica  | https://github.com/ney601        |
-|    | Tommy   | https://github.com/Tommybui28    |
+|    |  Name    |         Github                   |
+|----|----------|--------------------------------- |
+|    | Aebel🤦  | https://github.com/Aebel-Shajan  |
+|    | Jean🤷‍♀️   | https://github.com/Jean-005      |
+|    | Sahil🙅‍♂️  | https://github.com/sahilpatel1906|
+|    | Yesica💁‍♀️ | https://github.com/ney601        |
+|    | Tommy🙆‍♂️  | https://github.com/Tommybui28    |
 
 ### Resources
 
-### Licenses
+### Special thanks to:
+
+- Anna Henderson
+- Colin Farquhar
+- Richard Sneyd
+- Thibyaa Mahasivam
+- Zsolt Podoba-Szalai
+
+**For their invaluable guidance and assistance with this project.**
+
+
+## Licences
+
+
