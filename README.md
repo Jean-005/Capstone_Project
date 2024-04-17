@@ -57,14 +57,17 @@
 
 ### Wireframe
 
-
+![Capstone_Wireframe](https://github.com/Jean-005/Capstone_Project/assets/132017960/5068cc4a-ef31-493a-b3c4-e4c41148144b)
 ### Entity Relationship Diagrams
 
 
 ### Component diagram
 
+![Screenshot 2024-04-17 at 09 01 19](https://github.com/Jean-005/Capstone_Project/assets/132017960/de006a71-f33b-4916-abe8-145f9afc579e)
+
 
 ### Usage
+
 
 
 ### The URL of the deployed website:
