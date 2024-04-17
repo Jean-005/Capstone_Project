@@ -57,17 +57,14 @@
 
 ### Wireframe
 
-![Capstone_Wireframe](https://github.com/Jean-005/Capstone_Project/assets/132017960/5068cc4a-ef31-493a-b3c4-e4c41148144b)
+
 ### Entity Relationship Diagrams
 
 
 ### Component diagram
 
-![Screenshot 2024-04-17 at 09 01 19](https://github.com/Jean-005/Capstone_Project/assets/132017960/de006a71-f33b-4916-abe8-145f9afc579e)
-
 
 ### Usage
-
 
 
 ### The URL of the deployed website:
@@ -100,29 +97,16 @@
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
 
 
-### Credits and Acknowledgements - The Jeanius ReactAebels:
+### Credits and Acknowledgements
 
-|    |  Name    |         Github                   |
-|----|----------|--------------------------------- |
-|    | Aebel🤦  | https://github.com/Aebel-Shajan  |
-|    | Jean🤷‍♀️   | https://github.com/Jean-005      |
-|    | Sahil🙅‍♂️  | https://github.com/sahilpatel1906|
-|    | Yesica💁‍♀️ | https://github.com/ney601        |
-|    | Tommy🙆‍♂️  | https://github.com/Tommybui28    |
+|    |  Name   |         Github                   |
+|----|---------|--------------------------------- |
+|    | Aebel   | https://github.com/Aebel-Shajan  |
+|    | Jean    | https://github.com/Jean-005      |
+|    | Sahil   | https://github.com/sahilpatel1906|
+|    | Yesica  | https://github.com/ney601        |
+|    | Tommy   | https://github.com/Tommybui28    |
 
 ### Resources
 
-### Special thanks to:
-
-- Anna Henderson
-- Colin Farquhar
-- Richard Sneyd
-- Thibyaa Mahasivam
-- Zsolt Podoba-Szalai
-
-**For their invaluable guidance and assistance with this project.**
-
-
-## Licences
-
-
+### Licenses
