@@ -11,6 +11,22 @@
 
 ## Project Description
 
+This full-stack project utilised...
+
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
 
 **The names and versions of libraries used:**
@@ -104,11 +120,11 @@
 
 |    |  Name    |         Github                   |
 |----|----------|--------------------------------- |
-|    | Aebel🤦  | https://github.com/Aebel-Shajan  |
-|    | Jean🤷‍♀️   | https://github.com/Jean-005      |
-|    | Sahil🙅‍♂️  | https://github.com/sahilpatel1906|
-|    | Yesica💁‍♀️ | https://github.com/ney601        |
-|    | Tommy🙆‍♂️  | https://github.com/Tommybui28    |
+|    | Aebel    | https://github.com/Aebel-Shajan  |
+|    | Jean     | https://github.com/Jean-005      |
+|    | Sahil    | https://github.com/sahilpatel1906|
+|    | Yesica   | https://github.com/ney601        |
+|    | Tommy    | https://github.com/Tommybui28    |
 
 ### Resources
 
@@ -125,4 +141,4 @@
 
 ## Licences
 
-
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
