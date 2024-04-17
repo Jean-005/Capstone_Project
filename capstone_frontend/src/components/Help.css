@@ -22,4 +22,20 @@
     margin-bottom: 30px;
   }
   
- 
+  .complaint-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .complaint-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .complaint-form .MuiTextField-root {
+    margin-bottom: 20px;
+  }
+  
+  .complaint-form .MuiButton-root {
+    align-self: flex-middle;
+  }
