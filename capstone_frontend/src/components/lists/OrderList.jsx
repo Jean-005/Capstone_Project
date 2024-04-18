@@ -25,7 +25,9 @@ const OrderList = ({route}) => {
                     <h4>Order Id</h4>
                     <h4>Delivery Address</h4>
                 </div>
-                {orderComponents}
+                <div id="orders-list">
+                    {orderComponents}
+                </div>
             </section>
         </>
     );

@@ -5,11 +5,12 @@
 #order-list-heading{
     text-align: left;
     font-size: 30px;
+    color: #F22222;
 }
 
 #single-order{
     display: grid;
-    grid-template-columns: 0.1fr 0.2fr 0.79fr;
+    grid-template-columns: 0.2fr 0.2fr 0.6fr;
     text-align: center;
 }
 
@@ -19,7 +20,26 @@
 
 #order-field-titles{
    display: grid;
-   grid-template-columns: 0.1fr 0.2fr 0.79fr;
+   grid-template-columns: 0.2fr 0.2fr 0.6fr;
    margin: 0px;
    text-align: center;
+   background-color: #F22222;
+   border: solid rgba(250, 150, 150, 0.553) 1px;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+#order-field-titles > h4{
+    margin: 0px;
+    color: white;
+    padding: 10px;
+
+}
+
+#orders-list{
+    border: solid rgba(250, 150, 150, 0.553) 1px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
 }
