@@ -1,7 +1,8 @@
+import "./Order.css"
 const Order = ({ order }) => {
 
     return (
-        <>
+        <>  
             <p>{order.id}</p>
             <p>Address: {order.deliveryLocation}</p>
 
