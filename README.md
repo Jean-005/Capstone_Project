@@ -86,9 +86,13 @@ This project aims to improve delivery logistics by implementing an efficient rou
 ### Wireframe
 
 ![Capstone_Wireframe](https://github.com/Jean-005/Capstone_Project/assets/132017960/5068cc4a-ef31-493a-b3c4-e4c41148144b)
+
+
+
 ### Entity Relationship Diagrams
 
-- Add ERD please :)
+![Screenshot 2024-04-18 at 14 38 05](https://github.com/Jean-005/Capstone_Project/assets/156360394/11ff6c70-54c6-43dd-9967-5d0869ca1714)
+
 
 ### Component diagram
 
