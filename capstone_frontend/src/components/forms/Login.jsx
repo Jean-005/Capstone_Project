@@ -59,8 +59,11 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
     return (
         <>
             <div id="login-header">
+            <div className="logo-container">
+                <img src="./images/logo.png" alt="Image showing logo" className="logo-image"/>
+            </div>
                 <h1 className="branded-name">Jeanius Delivery</h1>
-
+                
             </div>
             <div id="login-page" className="branded-page">
 
