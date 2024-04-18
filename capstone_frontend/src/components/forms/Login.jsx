@@ -55,8 +55,12 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
         }
         else { alert("Wrong Username or Password"); }
 
-
     };
+
+    const handlePrivacyPolicyClick = () => {
+        setShowPrivacyPolicy(true);
+    };
+
 
     return (
         <>
