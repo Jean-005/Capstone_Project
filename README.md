@@ -145,11 +145,8 @@ To use GeoAPIFY's mapping services with our project, you'll need to get a GeoAPI
 
 
 ## List of Example Routes:
--Full urls including placeholders for variables (localhost:8080/users/:id)
--Permitted requests for each route (GET, POST, etc)
--Examples of permitted requests where appropriate
--Examples of responses
--Routes should be organised by route and not by request method
+
+[Link](https://github.com/Jean-005/Capstone_Project/blob/main/capstone_backend/Capstone_backend.postman_collection.json)
 
 
 ## Contributing Instructions
