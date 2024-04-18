@@ -11,6 +11,8 @@
 
 ## Project Description
 
+**Project Aims:**
+
 This full-stack project utilised...
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -21,7 +23,6 @@ This full-stack project utilised...
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
-<br /> 
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
@@ -47,7 +48,9 @@ This full-stack project utilised...
 - Spring Data JPA
 
 
-
+**Relevant documentation:**
+* Business case
+* Risk Register
 
 
 ### MVP
@@ -115,8 +118,17 @@ This full-stack project utilised...
 - Run the command **git pull** to ensure you have the latest version.
 - Open the react project in the preferred IDE such as Visual Studio Code.
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
+*How to get a GeoAPIFY key:*
 
-- ## Contributing Instructions
+## List of Example Routes:
+-Full urls including placeholders for variables (localhost:8080/users/:id)
+-Permitted requests for each route (GET, POST, etc)
+-Examples of permitted requests where appropriate
+-Examples of responses
+-Routes should be organised by route and not by request method
+
+
+## Contributing Instructions
 
 We appreciate your interest in contributing to the Capstone Project. We welcome contributions of all kinds, from bug reports and documentation improvements to new features and code changes.
 

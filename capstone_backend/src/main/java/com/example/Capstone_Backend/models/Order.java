@@ -1,5 +1,6 @@
 package com.example.Capstone_Backend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
@@ -31,7 +32,7 @@ public class Order {
     @Column
     private boolean isDelivered;
 
-    @JsonIgnoreProperties({"route"})
+    @JsonIgnoreProperties({"orders"})
     @ManyToOne
     @JoinColumn(name="route_id")
     private Route route;
