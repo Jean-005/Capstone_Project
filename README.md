@@ -47,7 +47,15 @@ This full-stack project utilised...
 - PostgreSQL Driver
 - Spring Data JPA
 
-
+| Back-end| Front-end               | 
+|-------------|---------------------------|
+| Maven Project         | React.js        |
+| Spring Boot: Ver. 3.2.3        | React Router DOM         |
+| Spring Boot Dev Tools         | Bootstrap         |
+| Spring Web        | Material-UI          |
+| PostgreSQL Driver         | 
+| Spring Data JPA        | 
+ 
 **Relevant documentation:**
 * Business case
 * Risk Register
