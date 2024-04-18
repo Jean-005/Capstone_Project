@@ -119,7 +119,7 @@ This full-stack project utilised...
 - Run the command **git pull** to ensure you have the latest version.
 - Open the react project in the preferred IDE such as Visual Studio Code.
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
-*How to get a GeoAPIFY key:*
+**How to get a GeoAPIFY key:**
 
 ## List of Example Routes:
 -Full urls including placeholders for variables (localhost:8080/users/:id)
