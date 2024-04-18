@@ -3,11 +3,9 @@ const Order = ({ order }) => {
 
     return (
         <>  
-            <p>{order.id}</p>
-            <p>Address: {order.deliveryLocation}</p>
-
-            <input type="checkbox"
-            />
+            <input type="checkbox"/>
+            <p><span className="order-field-name"></span>{order.id}</p>
+            <p><span className="order-field-name"></span>{order.deliveryLocation}</p>
         </>
 
     );
