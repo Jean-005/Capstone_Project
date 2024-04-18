@@ -115,7 +115,7 @@ This full-stack project utilised...
 - Open the react project in the preferred IDE such as Visual Studio Code.
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
 
-- ## Contributing Instructions
+## Contributing Instructions
 
 We appreciate your interest in contributing to the Capstone Project. We welcome contributions of all kinds, from bug reports and documentation improvements to new features and code changes.
 
