@@ -102,7 +102,7 @@ This project aims to improve delivery logistics by implementing an efficient rou
 
 ### The URL of the GitHub repository that contains the code:
 
-
+[Link](https://github.com/Jean-005/Capstone_Project)
 
 ## Installation instructions
 
@@ -125,7 +125,26 @@ This project aims to improve delivery logistics by implementing an efficient rou
 - Open the react project in the preferred IDE such as Visual Studio Code.
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
 
-**How to get a GeoAPIFY key:**
+**How to generate a GeoAPIFY key needed to this project:**
+
+To use GeoAPIFY's mapping services with our project, you'll need to get a GeoAPIFY API key. Here's how to get one:
+
+1.Sign up for a GeoAPIFY Account by visiting the following link:
+
+[GeoAPIFY](https://www.geoapify.com/) 
+
+2. Click on ```"Sign Up"```. Fill out the registration form and create your free account.
+   
+4. Obtain your API key by following these instructions: \
+
+-Once logged in to your GeoAPIFY account, navigate to your profile settings.
+-In your profile settings, you'll find your unique API key.
+
+5. Storing your API key securely:
+
+**-Important: Never share your API key publicly.** This is because it grants access to your GeoAPIFY account and should therefore be treated like a password.
+
+
 
 ## List of Example Routes:
 -Full urls including placeholders for variables (localhost:8080/users/:id)
