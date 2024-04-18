@@ -162,10 +162,10 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 |  👁️  |  Name    |         Github                   |
 |----|----------|--------------------------------- |
 |  👨‍🚀  | Aebel    | https://github.com/Aebel-Shajan  |
-|    | Jean     | https://github.com/Jean-005      |
-|    | Sahil    | https://github.com/sahilpatel1906|
-|    | Yesica   | https://github.com/ney601        |
-|    | Tommy    | https://github.com/Tommybui28    |
+|:woman_scientist:    | Jean     | https://github.com/Jean-005      |
+|:technologist:    | Sahil    | https://github.com/sahilpatel1906|
+|:woman_mechanic:    | Yesica   | https://github.com/ney601        |
+|:rofl:    | Tommy    | https://github.com/Tommybui28    |
 
 ### Resources
 
