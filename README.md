@@ -62,12 +62,11 @@ This project aims to improve delivery logistics by implementing an efficient rou
 ## Project MVPs and Extensions
 
 ### MVP
-* [x] Complete entity diagrams
-* [x] Create a login form for the driver
-* [x] Ability to register a new driver
-* [x] Show all orders the driver has to display
-* [x] Show the map with the route the driver has to take
-* [x] Tick off when an order has been delivered  
+-  A landing page that that allows drivers and admins to login or register.:white_check_mark:
+-  A navbar that is shared across all pages.:white_check_mark:
+-  A Routes page that diplay the list of all the orders to be delivered by a driver and also the route for each driver on the map.:white_check_mark:
+-  Ability off tick offf delivered orders.:white_check_mark:
+-  A profile page that displays users personal and contact information.:white_check_mark:
 
 ### Extensions
 - Add a profile picture to the profile page
