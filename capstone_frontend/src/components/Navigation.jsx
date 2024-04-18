@@ -54,12 +54,13 @@ const Navigation = ({ currentUser }) => {
             <AppBar position="static">
                 <Toolbar >
                     <Typography
+                        variant='h5'
                         noWrap
                         sx={{
                             display: { xs: 'none', md: 'flex' },
                         }}
                     >
-                        <h2 className='branded-name'>Jeanius Delivery</h2>
+                        <span className='branded-name'>Jeanius Delivery</span>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -101,13 +102,14 @@ const Navigation = ({ currentUser }) => {
                         </Menu>
                     </Box>
                     <Typography
+                        variant='h5'
                         noWrap
                         sx={{
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
                         }}
                     >
-                        <h2 className='branded-name'>Jeanius Delivery</h2>
+                        <span className='branded-name'>Jeanius Delivery</span>
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page, index) => (
