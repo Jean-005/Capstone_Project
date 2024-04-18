@@ -2,6 +2,9 @@ import { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import "./Help.css";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const Help = ({currentUser}) => {
 
@@ -32,14 +35,38 @@ const Help = ({currentUser}) => {
 
     return (
         <div className="help-container">
-        <div className="contact-info">
-            <h2>Contact Us</h2>
-            <div className="contact-details">
-            <p>Email: JeaniusReactAebels@fakeEmail.com</p>
-            <p>Phone: 032484092</p>
-            <p>Address: 80 Middlesex Street, London, E1 7EZ</p>
+            <div className="help-image-container">
+                <img src="./DeliveryImages/DeliveryLandscape.png" alt="Image showing landscape" className="help-image"/>
             </div>
-        </div>
+            <div className="contact-card-header">
+                        <h2>Contact Us</h2>
+                    </div>
+            <div className="contact-container">
+                {/* Email Card */}
+                <div className="contact-card">
+                    
+                    <div className="contact-detail-item">
+                        <EmailIcon className="contact-detail-icon" />
+                        <span className="contact-detail-text">JeaniusReactAebels@fakeEmail.com</span>
+                    </div>
+                </div>
+
+                {/* Phone Card */}
+                <div className="contact-card">
+                    <div className="contact-detail-item">
+                        <PhoneIcon className="contact-detail-icon" />
+                        <span className="contact-detail-text">032484092</span>
+                    </div>
+                </div>
+
+                {/* Address Card */}
+                <div className="contact-card">
+                    <div className="contact-detail-item">
+                        <LocationOnIcon className="contact-detail-icon" />
+                        <span className="contact-detail-text">80 Middlesex Street, London, E1 7EZ</span>
+                    </div>
+                </div>
+            </div>
             <div className="complaint-form">
                 <h2>Complaint Form</h2>
                 <form onSubmit={handleSubmit}>
