@@ -46,6 +46,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "postRoute",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderIds\": [1],\n    \"driverId\": 1,\n    \"distance\": 10,\n    \"duration\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/routes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"routes"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
