@@ -5,8 +5,8 @@
 2. [Business Planning](#business-planning)
 3. [Planning Diagrams](#planning-diagrams)
 4. [Installation instructions](#installation-instructions)
-5. [API routes](#api-routes)
-6. [Project MVPs and Extensions](#project-mvps-and-extensions)
+5. [Project MVPs and Extensions](#project-mvps-and-extensions)
+6. [API routes](#api-routes)
 7. [Contributing Instructions](#contributing-instructions)
 8. [Credits and Acknowledgements](#credits-and-acknowledgements)
 9. [Resources](#resources)
@@ -75,11 +75,16 @@ This project aims to improve delivery logistics by implementing an efficient rou
 - Display the driver's total deliveries made and rating
 - Create an admin login to view a list of all drivers
 
+### List of Example Routes:
+
+[Link](https://github.com/Jean-005/Capstone_Project/blob/main/capstone_backend/Capstone_backend.postman_collection.json)
+
+
 ## Planning Diagrams
 ### Project Timeline
 
 
-<img width="1282" alt="Screenshot 2024-04-10 at 08 59 27" src="https://github.com/Jean-005/Capstone_Project/assets/156692751/9e4699f0-01fd-42b7-96ce-6b807a437367">
+
 
 
 
@@ -92,6 +97,10 @@ This project aims to improve delivery logistics by implementing an efficient rou
 ### Entity Relationship Diagrams
 
 ![Screenshot 2024-04-18 at 14 38 05](https://github.com/Jean-005/Capstone_Project/assets/156360394/11ff6c70-54c6-43dd-9967-5d0869ca1714)
+
+### Class Diagrams
+
+![Screenshot 2024-04-18 at 15 15 54](https://github.com/Jean-005/Capstone_Project/assets/156360394/ec900b5f-7e77-4fca-8f43-c82d57eeabe9)
 
 
 ### Component diagram
@@ -142,11 +151,6 @@ To use GeoAPIFY's mapping services with our project, you'll need to get a GeoAPI
 4. Storing your API key securely:
 **- Important: Never share your API key publicly.** This is because it grants access to your GeoAPIFY account and should therefore be treated like a password.
 - Store this API key securely within the project's environment variables - typically an ```.env``` file at the root of your project (outside the ```src``` directory.
-
-
-## List of Example Routes:
-
-[Link](https://github.com/Jean-005/Capstone_Project/blob/main/capstone_backend/Capstone_backend.postman_collection.json)
 
 
 ## Contributing Instructions
