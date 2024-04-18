@@ -5,7 +5,7 @@ import "./Route.css"
 const Route = ({route, currentUser}) => {
 
     return (
-        <div>
+        <div id="route-page">
             <RouteDisplay 
                 route={route}
                 currentUser={currentUser}

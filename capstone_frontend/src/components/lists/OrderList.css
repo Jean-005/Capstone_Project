@@ -1,6 +1,7 @@
 #order-container{
-    margin: 20px;
-    margin-bottom: 100px;
+    padding: 1rem 5rem;
+    width: 50vw;
+    height: 100%;
 }
 
 #order-list-heading{
