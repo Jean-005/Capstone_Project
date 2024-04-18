@@ -33,20 +33,6 @@ This full-stack project utilised...
 
 **The names and versions of libraries used:**
 
-### Front-end
-- React.js
-- React Router DOM
-- Bootstrap
-- Material-UI
-
-### Back-end
-- Maven Project
-- Spring Boot: Ver. 3.2.3
-- Spring Boot Dev Tools
-- Spring Web
-- PostgreSQL Driver
-- Spring Data JPA
-
 | Back-end| Front-end               | 
 |-------------|---------------------------|
 | - Maven Project         | - React.js        |
