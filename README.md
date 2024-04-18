@@ -47,9 +47,14 @@ This full-stack project utilised...
 | - PostgreSQL Driver         | 
 | - Spring Data JPA        | 
  
-**Relevant documentation:**
-* Business case
-* Risk Register
+## Business Planning
+
+**Business case**
+
+**Risk register**
+
+**Legal and Ethical Standards**
+
 
 
 ### MVP
