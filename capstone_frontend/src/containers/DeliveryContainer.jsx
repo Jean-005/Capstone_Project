@@ -23,7 +23,7 @@ const DeliveryContainer = () => {
         // fetchRoutes() // Not really needed now
     }, []);
 
-   
+
     // Then fetch the best routes from the geoApify api
     useEffect(() => {
         // Only fetch if drivers and orders are populated. Also no need to fetch more than once
@@ -177,7 +177,7 @@ const DeliveryContainer = () => {
                 duration: duration
             }
             let orderIds = [];
-            for (let i = 0; i <routeOrders.length; i++){
+            for (let i = 0; i < routeOrders.length; i++) {
                 const routeOrder = routeOrders[i];
                 orderIds.push(routeOrder.id)
             }
@@ -186,7 +186,7 @@ const DeliveryContainer = () => {
                 driverId: driver.id,
                 distance: distance,
                 duration: duration
-            
+
             }
             console.log(routeDTO);
             addNewRoute(routeDTO);
@@ -197,15 +197,15 @@ const DeliveryContainer = () => {
 
     const handleRouteSelection = () => {
         routes.map((route) => {
-            if(route.driver.id === currentUser.id){
+            if (route.driver.id === currentUser.id) {
                 setCurrentDriverRoute(route)
 
             }
         })
     }
 
-    useEffect(()=> {
-        if(routes.length > 0 && currentUser !== null){
+    useEffect(() => {
+        if (routes.length > 0 && currentUser !== null) {
             handleRouteSelection();
         }
     }, [routes])
@@ -215,16 +215,16 @@ const DeliveryContainer = () => {
         {
             path: "/",
             element:
-                <Login 
-                drivers={drivers}
-                handleUserLogin={handleUserLogin}
-                addNewDriver = {addNewDriver}
+                <Login
+                    drivers={drivers}
+                    handleUserLogin={handleUserLogin}
+                    addNewDriver={addNewDriver}
                 />
         },
         {
             path: "/driver",
             element:
-                <Navigation currentUser={currentUser}/>,
+                <Navigation currentUser={currentUser} />,
             children: [
                 {
                     path: "/driver",
@@ -237,7 +237,7 @@ const DeliveryContainer = () => {
                                 {
                                     // We can replace the 0 with an index i depending on current user signed in
                                 }
-                                <RouteDisplay 
+                                <RouteDisplay
                                     route={currentDriverRoute}
                                     currentUser={currentUser}
                                 />
@@ -248,19 +248,15 @@ const DeliveryContainer = () => {
                 {
                     path: "/driver/profile",
                     element:
-                    <Profile 
-                    driver={currentUser}
-                    currentUser={currentUser}
-                    />
+                        <Profile
+                            driver={currentUser}
+                            currentUser={currentUser}
+                        />
                 },
                 {
                     path: "/driver/help",
-                    element: <Help currentUser={currentUser}/>
+                    element: <Help currentUser={currentUser} />
                 },
-                {
-                    path: "/privacy-policy",
-                    element: <PrivacyPolicy />,
-                  },
             ]
         }
     ]);

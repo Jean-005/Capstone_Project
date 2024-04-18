@@ -88,7 +88,6 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <DeliveryContainer />
-        <PrivacyPolicy /> 
       </ThemeProvider>
       </>
   );
