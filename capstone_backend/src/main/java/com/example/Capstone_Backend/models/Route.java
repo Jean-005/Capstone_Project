@@ -7,7 +7,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name="route")
+@Table(name="routes")
 public class Route {
 
     @Id

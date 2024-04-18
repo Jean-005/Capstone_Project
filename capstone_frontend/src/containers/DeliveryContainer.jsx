@@ -73,19 +73,20 @@ const DeliveryContainer = () => {
         const routesJson = await response.json();
         setRoutes(routesJson);
     }
-    const addNewRoute = async (route) => {
+
+
+    const addNewRoute = async (routeDTO) => {
         const response = await fetch("http://localhost:8080/routes", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(route)
+            body: JSON.stringify(routeDTO)
         });
-        const routesJson = await response.json();
-        setRoutes([...routes, routesJson]);
-        console.log(route);
+        const routeJSON = await response.json();
+        return routeJSON;
     }
-
+    
     // Geoapify
     // Fetch the optimised routes given an array of drivers and orders
     const fetchFromGeoApify = async () => {
@@ -175,30 +176,25 @@ const DeliveryContainer = () => {
                 distance: distance,
                 duration: duration
             }
-            let orderIds = [];
-            for (let i = 0; i < routeOrders.length; i++) {
-                const routeOrder = routeOrders[i];
-                orderIds.push(routeOrder.id)
-            }
-            const routeDTO = {
-                orderIds: orderIds,
-                driverId: driver.id,
-                distance: distance,
-                duration: duration
-
-            }
-            console.log(routeDTO);
-            addNewRoute(routeDTO);
             return routeObject
         });
         setRoutes(calculatedRouteObjects);
+        const responses = calculatedRouteObjects.map((route)=> {
+            const orderIds = route.orders.map((order)=>{return order.id})
+            const routeDTO = {
+                orderIds: orderIds,
+                driverId: route.driver.id,
+                distance: route.distance,
+                duration: route.duration
+            }
+            return addNewRoute(routeDTO);
+        })
     }
 
     const handleRouteSelection = () => {
         routes.map((route) => {
             if (route.driver.id === currentUser.id) {
                 setCurrentDriverRoute(route)
-
             }
         })
     }

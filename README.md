@@ -2,16 +2,21 @@
 
 ## Table of Contents
 1. [Project Description](#project-description)
-2. [Installation instructions](#installation-instructions)
-3. [Usage](#usage)
-4. [Contributing Instructions](#contributing-instructions)
-5. [Credits and Acknowledgements](#credits-and-acknowledgements)
-6. [Resources](#resources)
-7. [Licences](#licences)
+2. [Business Planning](#business-planning)
+3. [Installation instructions](#installation-instructions)
+4. [Planning Diagrams](#planning-diagrams)
+5. [API routes](#api-routes)
+6. [Project MVPs and Extensions](#project-mvps-and-extensions)
+7. [Contributing Instructions](#contributing-instructions)
+8. [Credits and Acknowledgements](#credits-and-acknowledgements)
+9. [Resources](#resources)
+10. [Licences](#licences)
 
 ## Project Description
 
-This full-stack project utilised...
+**Project Aims:**
+
+This project aims to improve delivery logistics by implementing an efficient route planning system for drivers. Currently, the delivery fleet is underutilised due to fixed routes and inefficient assignment practices that do not consider package quantities, leading to unreliable delivery times. By developing a dynamic route planning system, this project aims to optimise delivery routes, ensuring efficient vehicle utilisation and timely deliveries. The project's goal is to revolutionise delivery operations within RainforestRetail, maximising fleet efficiency and delivering a superior customer experience.
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
@@ -21,32 +26,38 @@ This full-stack project utilised...
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
-<br /> 
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
 
 
 **The names and versions of libraries used:**
 
-### Front-end
-- React.js
-- React Router DOM
-- Bootstrap
-- Material-UI
+| Back-end| Front-end               | 
+|-------------|---------------------------|
+| - Maven Project         | - React.js        |
+| - Spring Boot: Ver. 3.2.3        | - React Router DOM         |
+| - Spring Boot Dev Tools         | - Bootstrap         |
+| - Spring Web        | - Material-UI          |
+| - PostgreSQL Driver         | 
+| - Spring Data JPA        | 
+ 
+## Business Planning
 
-### Back-end
-- Maven Project
-- Spring Boot: Ver. 3.2.3
-- Spring Boot Dev Tools
-- Spring Web
-- PostgreSQL Driver
-- Spring Data JPA
+**Business case**
 
+[Link](https://docs.google.com/document/d/1Dwi3r5okjL_KaYhb1pgz5VXAs-lPhW75e9ivnyG0zX8/edit)
 
+**Risk register**
+
+[Link](https://docs.google.com/spreadsheets/d/1zadLMozuzAw5l-dovoioiaGYB4mqGuj3Vnu7KwqJPCk/edit#gid=578357748)
+
+**Legal and Ethical Standards**
+
+[Link](https://docs.google.com/document/d/19pYbzZjOPUX5-IniUgaeaoEL9Yq0Ssj4ty4eZUdIZ80/edit?usp=sharing) 
 
 
 
@@ -77,13 +88,11 @@ This full-stack project utilised...
 ![Capstone_Wireframe](https://github.com/Jean-005/Capstone_Project/assets/132017960/5068cc4a-ef31-493a-b3c4-e4c41148144b)
 ### Entity Relationship Diagrams
 
+- Add ERD please :)
 
 ### Component diagram
 
 ![Screenshot 2024-04-17 at 09 01 19](https://github.com/Jean-005/Capstone_Project/assets/132017960/de006a71-f33b-4916-abe8-145f9afc579e)
-
-
-### Usage
 
 
 
@@ -116,7 +125,17 @@ This full-stack project utilised...
 - Open the react project in the preferred IDE such as Visual Studio Code.
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
 
-- ## Contributing Instructions
+**How to get a GeoAPIFY key:**
+
+## List of Example Routes:
+-Full urls including placeholders for variables (localhost:8080/users/:id)
+-Permitted requests for each route (GET, POST, etc)
+-Examples of permitted requests where appropriate
+-Examples of responses
+-Routes should be organised by route and not by request method
+
+
+## Contributing Instructions
 
 We appreciate your interest in contributing to the Capstone Project. We welcome contributions of all kinds, from bug reports and documentation improvements to new features and code changes.
 
@@ -143,10 +162,10 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 |  👁️  |  Name    |         Github                   |
 |----|----------|--------------------------------- |
 |  👨‍🚀  | Aebel    | https://github.com/Aebel-Shajan  |
-|    | Jean     | https://github.com/Jean-005      |
-|    | Sahil    | https://github.com/sahilpatel1906|
-|    | Yesica   | https://github.com/ney601        |
-|    | Tommy    | https://github.com/Tommybui28    |
+|:woman_scientist:    | Jean     | https://github.com/Jean-005      |
+|:technologist:    | Sahil    | https://github.com/sahilpatel1906|
+|:woman_mechanic:    | Yesica   | https://github.com/ney601        |
+|:rofl:    | Tommy    | https://github.com/Tommybui28    |
 
 ### Resources
 
