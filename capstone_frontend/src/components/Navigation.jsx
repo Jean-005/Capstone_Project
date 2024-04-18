@@ -126,7 +126,7 @@ const Navigation = ({ currentUser }) => {
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} id="IconButton">
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                <Avatar>{currentUser.name[0]}</Avatar>
                             </IconButton>
                         </Tooltip>
                         <Menu

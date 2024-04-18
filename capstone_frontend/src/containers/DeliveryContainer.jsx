@@ -232,13 +232,6 @@ const DeliveryContainer = () => {
                             <Route 
                                 route={currentDriverRoute}
                             />
-                            // <>
-                            //     <RouteDisplay
-                            //         route={currentDriverRoute}
-                            //     />
-                            //     <OrderList route={currentDriverRoute} />
-                            // </>
-
                 },
                 {
                     path: "/driver/profile",
