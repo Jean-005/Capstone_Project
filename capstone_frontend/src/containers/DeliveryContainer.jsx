@@ -6,7 +6,6 @@ import Login from "../components/forms/Login";
 import OrderList from "../components/lists/OrderList";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Help from "../components/Help";
-import PrivacyPolicy from "../components/PrivacyPolicy";
 
 
 const DeliveryContainer = () => {
