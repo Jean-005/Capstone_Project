@@ -173,8 +173,8 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 **7. Review and Feedback:** We will review your pull request and provide feedback.
 
 
-
-### Credits and Acknowledgements - The Jeanius ReactAebels:
+##Credits and Acknowledgements
+### The Jeanius ReactAebels:
 
 |  👁️  |  Name    |         Github                   |
 |----|----------|--------------------------------- |
