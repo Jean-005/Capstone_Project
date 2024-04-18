@@ -3,8 +3,8 @@
 ## Table of Contents
 1. [Project Description](#project-description)
 2. [Business Planning](#business-planning)
-3. [Installation instructions](#installation-instructions)
-4. [Planning Diagrams](#planning-diagrams)
+3. [Planning Diagrams](#planning-diagrams)
+4. [Installation instructions](#installation-instructions)
 5. [API routes](#api-routes)
 6. [Project MVPs and Extensions](#project-mvps-and-extensions)
 7. [Contributing Instructions](#contributing-instructions)
@@ -75,7 +75,7 @@ This project aims to improve delivery logistics by implementing an efficient rou
 - Display the driver's total deliveries made and rating
 - Create an admin login to view a list of all drivers
 
-
+## Planning Diagrams
 ### Project Timeline
 
 
