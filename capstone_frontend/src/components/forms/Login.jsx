@@ -16,6 +16,8 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
         password: ''
     });
 
+    const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+
     const handleInputChange = (event) => {
         setFormData({
             ...formData,
