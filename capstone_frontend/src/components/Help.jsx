@@ -5,6 +5,7 @@ import "./Help.css";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Link } from "react-router-dom";
 // import img1 from "./images/deliveryTop.png";
 
 const Help = ({currentUser}) => {
@@ -35,6 +36,7 @@ const Help = ({currentUser}) => {
     };
 
     return (
+    <>
         <div className="help-container">
             <div className="help-image-container">
                 <img src="https://eriks.co.uk/en/know-how-hub/news/eriks-track-and-trace/_jcr_content/content_mainpar/section_1/par/blogimage.coreimg.jpeg/1709281985188/eriks-track-and-trace-combined-graphic-1-pr.jpeg" alt="Image showing landscape" className="help-image"/>
@@ -98,10 +100,12 @@ const Help = ({currentUser}) => {
                     <Button variant="outlined" type="submit">Submit</Button>
                 </form>
             </div>
-            <footer className="footer">
-                <p>&copy; 2024 Help Desk Inc.</p>
-            </footer>
+            
         </div>
+        <footer className="footer">
+        <p>&copy; 2024 Help Desk Inc.</p>
+    </footer>
+</>
     );
 
 }

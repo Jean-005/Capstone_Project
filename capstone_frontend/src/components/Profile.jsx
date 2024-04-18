@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Profile.css";
 
 const Profile = ({ driver, currentUser }) => {
@@ -13,6 +13,7 @@ const Profile = ({ driver, currentUser }) => {
     }, []);
 
     return (
+        <>
         <div id="profile-page-container" className="branded-page">
             {currentUser
                 ?
@@ -43,6 +44,10 @@ const Profile = ({ driver, currentUser }) => {
 
             }
         </div>
+        <footer className="footer">
+        <p>&copy; 2024</p>
+    </footer>
+    </>
     );
 }
 
