@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState } from "react";
 import {
   TileLayer,
   MapContainer,
@@ -12,9 +12,12 @@ const maps = {
 };
 
 const RouteDisplay = ({route}) => {
+  if(route){
+    console.log(route)
+  }
   const [map, setMap] = useState(null);
 
-  if(route.length === 0) {
+  if(!route || !route.waypoints) {
     return <p>Map loading</p>
   }
 
@@ -24,11 +27,11 @@ const RouteDisplay = ({route}) => {
   return (
     <div>
       <MapContainer
-        center={[37.0902, -95.7129]}
+        center={route.waypoints[0]}
         zoom={3}
         zoomControl={false}
         style={{ height: "50vh", width: "100%", padding: 0 }}
-        whenCreated={map => setMap(map)}
+        whenCreated={setMap}
       >
 
         <RoutingControl 

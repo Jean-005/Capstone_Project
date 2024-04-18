@@ -3,7 +3,8 @@
 }
 
 #order-list-heading{
-    text-align: center;
+    text-align: left;
+    font-size: 30px;
 }
 
 #single-order{

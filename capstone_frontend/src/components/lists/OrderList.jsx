@@ -1,11 +1,14 @@
 import Order from "../Order";
 import "./OrderList.css"
 
-const OrderList = ({orders}) => {
+const OrderList = ({route}) => {
+    if(!route) {
+        return <p>Order loading</p>
+    }
 
-    const orderComponents = orders.map((order) => {
+    const orderComponents = route.orders.map((order) => {
         return (
-            <article id="single-order">
+            <article id="single-order" key={order.id}>
                 <Order
                 key={order.id}
                 order={order}
