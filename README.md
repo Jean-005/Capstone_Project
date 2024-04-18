@@ -2,19 +2,21 @@
 
 ## Table of Contents
 1. [Project Description](#project-description)
-2. [Installation instructions](#installation-instructions)
-3. [Usage](#usage)
-4. [Contributing Instructions](#contributing-instructions)
-5. [Credits and Acknowledgements](#credits-and-acknowledgements)
-6. [Resources](#resources)
-7. [Licences](#licences)
+2. [Business Planning](#business-planning)
+3. [Installation instructions](#installation-instructions)
+4. [Planning Diagrams](#planning-diagrams)
+5. [API routes](#api-routes)
+6. [Project MVPs and Extensions](#project-mvps-and-extensions)
+7. [Contributing Instructions](#contributing-instructions)
+8. [Credits and Acknowledgements](#credits-and-acknowledgements)
+9. [Resources](#resources)
+10. [Licences](#licences)
 
 ## Project Description
 
 **Project Aims:**
-This project aims to improve delivery logistics by implementing an efficient route planning system for drivers. Currently, the delivery fleet is underutilised due to fixed routes and inefficient assignment practices that do not consider package quantities, leading to unreliable delivery times. By developing a dynamic route planning system, this project aims to optimise delivery routes, ensuring efficient vehicle utilisation and timely deliveries. The project's goal is to revolutionise delivery operations within RainforestRetail, maximising fleet efficiency and delivering a superior customer experience.
 
-This full-stack project utilised...
+This project aims to improve delivery logistics by implementing an efficient route planning system for drivers. Currently, the delivery fleet is underutilised due to fixed routes and inefficient assignment practices that do not consider package quantities, leading to unreliable delivery times. By developing a dynamic route planning system, this project aims to optimise delivery routes, ensuring efficient vehicle utilisation and timely deliveries. The project's goal is to revolutionise delivery operations within RainforestRetail, maximising fleet efficiency and delivering a superior customer experience.
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
@@ -29,7 +31,7 @@ This full-stack project utilised...
 ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
 
 
 **The names and versions of libraries used:**
@@ -43,9 +45,20 @@ This full-stack project utilised...
 | - PostgreSQL Driver         | 
 | - Spring Data JPA        | 
  
-**Relevant documentation:**
-* Business case
-* Risk Register
+## Business Planning
+
+**Business case**
+
+[Link](https://docs.google.com/document/d/1Dwi3r5okjL_KaYhb1pgz5VXAs-lPhW75e9ivnyG0zX8/edit)
+
+**Risk register**
+
+[Link](https://docs.google.com/spreadsheets/d/1zadLMozuzAw5l-dovoioiaGYB4mqGuj3Vnu7KwqJPCk/edit#gid=578357748)
+
+**Legal and Ethical Standards**
+
+[Link](https://docs.google.com/document/d/19pYbzZjOPUX5-IniUgaeaoEL9Yq0Ssj4ty4eZUdIZ80/edit?usp=sharing) 
+
 
 
 ### MVP
@@ -73,16 +86,17 @@ This full-stack project utilised...
 ### Wireframe
 
 ![Capstone_Wireframe](https://github.com/Jean-005/Capstone_Project/assets/132017960/5068cc4a-ef31-493a-b3c4-e4c41148144b)
+
+
+
 ### Entity Relationship Diagrams
 
-- Add ERD please :)
+![Screenshot 2024-04-18 at 14 38 05](https://github.com/Jean-005/Capstone_Project/assets/156360394/11ff6c70-54c6-43dd-9967-5d0869ca1714)
+
 
 ### Component diagram
 
 ![Screenshot 2024-04-17 at 09 01 19](https://github.com/Jean-005/Capstone_Project/assets/132017960/de006a71-f33b-4916-abe8-145f9afc579e)
-
-
-### Usage
 
 
 
@@ -92,7 +106,7 @@ This full-stack project utilised...
 
 ### The URL of the GitHub repository that contains the code:
 
-
+[Link](https://github.com/Jean-005/Capstone_Project)
 
 ## Installation instructions
 
@@ -115,7 +129,20 @@ This full-stack project utilised...
 - Open the react project in the preferred IDE such as Visual Studio Code.
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
 
-**How to get a GeoAPIFY key:**
+**How to generate a GeoAPIFY key needed to this project:**
+
+To use GeoAPIFY's mapping services with our project, you'll need to get a GeoAPIFY API key. Here's how to get one:
+
+1. Sign up for a GeoAPIFY Account by visiting the following link: [GeoAPIFY](https://www.geoapify.com/) .
+2. Click on ```"Sign Up"```. Fill out the registration form and create your free account.
+3. Obtain your API key by following these instructions:
+- Once logged in to your GeoAPIFY account, navigate to your profile settings.
+- In your profile settings, you'll find your unique API key.
+
+4. Storing your API key securely:
+**- Important: Never share your API key publicly.** This is because it grants access to your GeoAPIFY account and should therefore be treated like a password.
+- Store this API key securely within the project's environment variables - typically an ```.env``` file at the root of your project (outside the ```src``` directory.
+
 
 ## List of Example Routes:
 -Full urls including placeholders for variables (localhost:8080/users/:id)
@@ -152,10 +179,10 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 |  👁️  |  Name    |         Github                   |
 |----|----------|--------------------------------- |
 |  👨‍🚀  | Aebel    | https://github.com/Aebel-Shajan  |
-|    | Jean     | https://github.com/Jean-005      |
-|    | Sahil    | https://github.com/sahilpatel1906|
-|    | Yesica   | https://github.com/ney601        |
-|    | Tommy    | https://github.com/Tommybui28    |
+|:woman_scientist:    | Jean     | https://github.com/Jean-005      |
+|:technologist:    | Sahil    | https://github.com/sahilpatel1906|
+|:woman_mechanic:    | Yesica   | https://github.com/ney601        |
+|:rofl:    | Tommy    | https://github.com/Tommybui28    |
 
 ### Resources
 

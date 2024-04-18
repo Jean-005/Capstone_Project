@@ -3,6 +3,7 @@ import Registration from "./Registration";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link, useNavigate } from "react-router-dom";
+import PrivacyPolicy from "../PrivacyPolicy";
 import "./Login.css";
 
 
@@ -52,14 +53,14 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
         }
         else { alert("Wrong Username or Password"); }
 
-
     };
+
 
     return (
         <>
             <div id="login-header">
                 <h1 className="branded-name">Jeanius Delivery</h1>
-                
+
             </div>
             <div id="login-page" className="branded-page">
 
@@ -104,7 +105,7 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
                 </div>
             </div>
             <footer className="footer">
-                <p>&copy; 2024 Help Desk Inc.   Your privacy and security are important to us. For more information on how we use your data read our <Link to="/privacy-policy">privacy policy</Link>.</p>
+                <p>&copy; 2024 Help Desk Inc. Your privacy and security are important to us. For more information on how we use your data read our <PrivacyPolicy/></p>
             </footer>
         </>
     );

@@ -23,7 +23,7 @@ const DeliveryContainer = () => {
         // fetchRoutes() // Not really needed now
     }, []);
 
-   
+
     // Then fetch the best routes from the geoApify api
     useEffect(() => {
         // Only fetch if drivers and orders are populated. Also no need to fetch more than once
@@ -195,7 +195,7 @@ const DeliveryContainer = () => {
 
     const handleRouteSelection = () => {
         routes.map((route) => {
-            if(route.driver.id === currentUser.id){
+            if (route.driver.id === currentUser.id) {
                 setCurrentDriverRoute(route)
             }
         })
@@ -212,30 +212,24 @@ const DeliveryContainer = () => {
         {
             path: "/",
             element:
-                <Login 
-                drivers={drivers}
-                handleUserLogin={handleUserLogin}
-                addNewDriver = {addNewDriver}
+                <Login
+                    drivers={drivers}
+                    handleUserLogin={handleUserLogin}
+                    addNewDriver={addNewDriver}
                 />
         },
         {
             path: "/driver",
             element:
-                <Navigation currentUser={currentUser}/>,
+                <Navigation currentUser={currentUser} />,
             children: [
                 {
                     path: "/driver",
                     element:
-                        // Instead of doing conditional rendering we could maybe store all this in a page container?
                         !routes ?
                             <p>Loading routes...</p>
                             :
                             <>
-                                {/* <Route 
-                                    route={currentDriverRoute}
-                                    currentUser={currentUser}
-                                    // orders={currentDriverRoute.orders}
-                                /> */}
                                 <RouteDisplay
                                     route={currentDriverRoute}
                                     currentUser={currentUser}
@@ -247,16 +241,15 @@ const DeliveryContainer = () => {
                 {
                     path: "/driver/profile",
                     element:
-                    <Profile 
-                    driver={currentUser}
-                    currentUser={currentUser}
-                    />
+                        <Profile
+                            driver={currentUser}
+                            currentUser={currentUser}
+                        />
                 },
                 {
                     path: "/driver/help",
-                    element:
-                    <Help currentUser={currentUser}/>
-                }
+                    element: <Help currentUser={currentUser} />
+                },
             ]
         }
     ]);
