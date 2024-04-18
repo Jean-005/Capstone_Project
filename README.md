@@ -1,14 +1,14 @@
-<h1 align="center" id="title">Capstone_Project</h1>
+<h1 align="center" id="title">Jeanius_Delivery</h1>
 
 ## Table of Contents
 1. [Project Description](#project-description)
 2. [Business Planning](#business-planning)
-3. [Planning Diagrams](#planning-diagrams)
-4. [Installation instructions](#installation-instructions)
-5. [Project MVPs and Extensions](#project-mvps-and-extensions)
-6. [API routes](#api-routes)
+3. [Project MVPs and Extensions](#project-mvps-and-extensions)
+4. [API routes](#api-routes)
+5. [Planning Diagrams](#planning-diagrams)
+6. [Installation instructions](#installation-instructions)
 7. [Contributing Instructions](#contributing-instructions)
-8. [Credits and Acknowledgements](#credits-and-acknowledgements)
+9. [Credits and Acknowledgements](#credits-and-acknowledgements)
 9. [Resources](#resources)
 10. [Licences](#licences)
 
@@ -59,7 +59,7 @@ This project aims to improve delivery logistics by implementing an efficient rou
 
 [Link](https://docs.google.com/document/d/19pYbzZjOPUX5-IniUgaeaoEL9Yq0Ssj4ty4eZUdIZ80/edit?usp=sharing) 
 
-
+## Project MVPs and Extensions
 
 ### MVP
 * [x] Complete entity diagrams
@@ -74,6 +74,8 @@ This project aims to improve delivery logistics by implementing an efficient rou
 - Display and update the driver's vehicle details
 - Display the driver's total deliveries made and rating
 - Create an admin login to view a list of all drivers
+
+## API Routes
 
 ### List of Example Routes:
 
@@ -185,7 +187,7 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 |:woman_mechanic:    | Yesica   | https://github.com/ney601        |
 |:rofl:    | Tommy    | https://github.com/Tommybui28    |
 
-### Resources
+## Resources
 
 ### Special thanks to:
 
