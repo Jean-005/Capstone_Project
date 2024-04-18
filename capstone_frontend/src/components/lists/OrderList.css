@@ -1,0 +1,25 @@
+#order-container{
+    margin: 20px;
+}
+
+#order-list-heading{
+    text-align: left;
+    font-size: 30px;
+}
+
+#single-order{
+    display: grid;
+    grid-template-columns: 0.1fr 0.2fr 0.79fr;
+    text-align: center;
+}
+
+#single-order > input{
+    width: 15px;
+}
+
+#order-field-titles{
+   display: grid;
+   grid-template-columns: 0.1fr 0.2fr 0.79fr;
+   margin: 0px;
+   text-align: center;
+}
