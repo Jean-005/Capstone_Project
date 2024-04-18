@@ -2,7 +2,8 @@ import { useState } from "react";
 import Registration from "./Registration";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import "./Login.css";
 
 
 
@@ -55,10 +56,17 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
     };
 
     return (
-        <div>
-            <div>
-                <h2>Login Form:</h2>
-                <form onSubmit={handleSubmit}>
+        <>
+        <div id="login-page">
+            <div id="login-header">
+            <h1 className="company-name">Jeanius Delivery</h1>
+            </div>
+            <div id="login-body">
+            <div id="login-container">
+            <h2 id="account-login">Account Login</h2>
+            <div id="login-form-container">
+                <form onSubmit={handleSubmit} id="login-form">
+                
                     <TextField
                         autoFocus
                         required
@@ -83,11 +91,20 @@ const Login = ({ drivers, handleUserLogin, addNewDriver }) => {
                         onChange={handleInputChange}
 
                     />
-                    <Button variant="outlined" type="submit">Login</Button>
+                    <Link to="/">Forgot your password?</Link>
                 </form>
+                <div id="login-button-container">
+                <Button variant="outlined" type="submit" form="login-form">Login</Button>
+                <Registration addNewDriver = {addNewDriver}/>
+                </div>
+                </div>
             </div>
-            <Registration addNewDriver = {addNewDriver}/>
+            </div>
         </div>
+        <footer className="footer">
+        <p>&copy; 2024 Help Desk Inc.   Your privacy and security are important to us. For more information on how we use your data read our <Link to="/privacy-policy">privacy policy</Link>.</p>
+  </footer>
+        </>
     );
 
 };
