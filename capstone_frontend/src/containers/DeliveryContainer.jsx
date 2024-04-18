@@ -229,13 +229,15 @@ const DeliveryContainer = () => {
                         !routes ?
                             <p>Loading routes...</p>
                             :
-                            <>
-                                <RouteDisplay
-                                    route={currentDriverRoute}
-                                    currentUser={currentUser}
-                                />
-                                <OrderList route={currentDriverRoute} />
-                            </>
+                            <Route 
+                                route={currentDriverRoute}
+                            />
+                            // <>
+                            //     <RouteDisplay
+                            //         route={currentDriverRoute}
+                            //     />
+                            //     <OrderList route={currentDriverRoute} />
+                            // </>
 
                 },
                 {
