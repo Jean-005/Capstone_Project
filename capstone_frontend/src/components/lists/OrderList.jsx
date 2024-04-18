@@ -17,7 +17,6 @@ const OrderList = ({route}) => {
         )
     })
     return (
-        <>
             <section id="order-container">
                 <h3 id="order-list-heading">Orders</h3>
                 <div id="order-field-titles">
@@ -29,7 +28,6 @@ const OrderList = ({route}) => {
                     {orderComponents}
                 </div>
             </section>
-        </>
     );
 }
 

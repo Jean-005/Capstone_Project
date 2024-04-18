@@ -12,17 +12,12 @@ const maps = {
 };
 
 const RouteDisplay = ({route}) => {
-  if(route){
-    console.log(route)
-  }
+
   const [map, setMap] = useState(null);
 
-  if(!route || !route.waypoints) {
+  if(!route) {
     return <p>Map loading</p>
   }
-
-
-
 
   return (
     <div>
@@ -30,8 +25,8 @@ const RouteDisplay = ({route}) => {
         center={route.waypoints[0]}
         zoom={3}
         zoomControl={false}
-        style={{ height: "50vh", width: "100%", padding: 0 }}
-        whenCreated={setMap}
+        style={{ height: "50vh", width: "100%"}}
+        whenCreated={map => setMap()}
       >
 
         <RoutingControl 
