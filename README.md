@@ -80,6 +80,7 @@ This full-stack project utilised...
 ![Capstone_Wireframe](https://github.com/Jean-005/Capstone_Project/assets/132017960/5068cc4a-ef31-493a-b3c4-e4c41148144b)
 ### Entity Relationship Diagrams
 
+- Add ERD please :)
 
 ### Component diagram
 
