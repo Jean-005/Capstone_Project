@@ -73,6 +73,18 @@ const DeliveryContainer = () => {
         const routesJson = await response.json();
         setRoutes(routesJson);
     }
+    const addNewRoute = async (route) => {
+        const response = await fetch("http://localhost:8080/routes", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(route)
+        });
+        const routesJson = await response.json();
+        setRoutes([...routes, routesJson]);
+        console.log(route);
+    }
 
     // Geoapify
     // Fetch the optimised routes given an array of drivers and orders
@@ -157,12 +169,26 @@ const DeliveryContainer = () => {
             // Combine them into a route object
             const routeObject = {
                 orders: routeOrders,
-                //v We can calculate this using order pickup and drop off locations and driver start location
+                // We can calculate this using order pickup and drop off locations and driver start location
                 waypoints: routeWaypoints, // stays for now, remove later on or we can add it to backend.
                 driver: driver,
                 distance: distance,
                 duration: duration
             }
+            let orderIds = [];
+            for (let i = 0; i <routeOrders.length; i++){
+                const routeOrder = routeOrders[i];
+                orderIds.push(routeOrder.id)
+            }
+            const routeDTO = {
+                orderIds: orderIds,
+                driverId: driver.id,
+                distance: distance,
+                duration: duration
+            
+            }
+            console.log(routeDTO);
+            addNewRoute(routeDTO);
             return routeObject
         });
         setRoutes(calculatedRouteObjects);

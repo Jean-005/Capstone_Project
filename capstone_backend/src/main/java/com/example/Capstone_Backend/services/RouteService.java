@@ -8,6 +8,7 @@ import com.example.Capstone_Backend.models.RouteDTO;
 import com.example.Capstone_Backend.repositories.DriverRepository;
 import com.example.Capstone_Backend.repositories.OrderRepository;
 import com.example.Capstone_Backend.repositories.RouteRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,16 +37,20 @@ public class RouteService {
     }
     public Route saveRoute(RouteDTO routeDTO) {
 
-        List<Order> orders = new ArrayList<>();
-        for (Long orderId : routeDTO.getOrderIds()){
-            Order order = orderRepository.findById(orderId).get();
-            orders.add(order);
-        }
         Driver driver = driverRepository.findById(routeDTO.getDriverId()).get();
 
-        Route route = new Route(orders, driver,routeDTO.getDistance(), routeDTO.getDuration());
+        Route route = new Route(driver,routeDTO.getDistance(), routeDTO.getDuration());
+        routeRepository.save(route);
 
-        return routeRepository.save(route);
+        for (Long orderId : routeDTO.getOrderIds()){
+
+            Order order = orderRepository.findById(orderId).get();
+            order.setRoute(route);
+            orderRepository.save(order);
+        }
+
+        return route;
+
     }
 }
 
