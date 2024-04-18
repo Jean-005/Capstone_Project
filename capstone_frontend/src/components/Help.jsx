@@ -33,7 +33,7 @@ const Help = ({currentUser}) => {
     return (
         <div className="help-container">
         <div className="contact-info">
-            <h2>Contact Us:</h2>
+            <h2>Contact Us</h2>
             <div className="contact-details">
             <p>Email: JeaniusReactAebels@fakeEmail.com</p>
             <p>Phone: 032484092</p>
@@ -41,7 +41,7 @@ const Help = ({currentUser}) => {
             </div>
         </div>
             <div className="complaint-form">
-                <h2>Complaint Form:</h2>
+                <h2>Complaint Form</h2>
                 <form onSubmit={handleSubmit}>
                     <TextField
                         autoFocus

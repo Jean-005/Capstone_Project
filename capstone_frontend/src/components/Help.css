@@ -14,11 +14,11 @@
   .contact-details {
     border-radius: 8px;
     padding: 30px;
-    background-color: white;
+    text-align: center;
   }
   
   .contact-details p {
-    margin: 10px 0;
+    margin: 10px;
   }
   
   .complaint-form {
@@ -40,6 +40,10 @@
   .complaint-form form {
     display: flex;
     flex-direction: column;
+  }
+
+  .complaint-form .MuiButton-root {
+    margin-top: 20px;
   }
 
   .complaint-form button {
