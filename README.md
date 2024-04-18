@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Jeanius_Delivery</h1>
+<h1 align="center" id="title">Jeanius Delivery</h1>
 
 ## Table of Contents
 1. [Project Description](#project-description)
