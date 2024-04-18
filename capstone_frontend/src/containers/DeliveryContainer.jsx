@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Profile from "../components/Profile";
 import RouteDisplay from "../components/RouteDisplay";
 import Login from "../components/forms/Login";
 import OrderList from "../components/lists/OrderList";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Help from "../components/Help";
 
 
@@ -15,13 +15,14 @@ const DeliveryContainer = () => {
     const [currentUser, setCurrentUser] = useState(null);
     const [currentDriverRoute, setCurrentDriverRoute] = useState([]);
 
+
+    // Use Effect hooks
     // Fetch the drivers and orders first
     useEffect(() => {
         fetchDrivers()
         fetchOrders()
         // fetchRoutes() // Not really needed now
     }, []);
-
 
     // Then fetch the best routes from the geoApify api
     useEffect(() => {
@@ -31,6 +32,14 @@ const DeliveryContainer = () => {
         }
     }, [drivers, orders, currentUser]);
 
+    useEffect(() => {
+        if (routes.length > 0 && currentUser !== null) {
+            handleRouteSelection();
+        }
+    }, [routes])
+
+
+    // Fetching & Posting
     // Drivers
     const fetchDrivers = async () => {
         const response = await fetch("http://localhost:8080/drivers", {
@@ -73,7 +82,6 @@ const DeliveryContainer = () => {
         const routesJson = await response.json();
         setRoutes(routesJson);
     }
-
 
     const addNewRoute = async (routeDTO) => {
         const response = await fetch("http://localhost:8080/routes", {
@@ -199,11 +207,7 @@ const DeliveryContainer = () => {
         })
     }
 
-    useEffect(() => {
-        if (routes.length > 0 && currentUser !== null) {
-            handleRouteSelection();
-        }
-    }, [routes])
+
 
     // React routing
     const deliveryRoutes = createBrowserRouter([
@@ -224,21 +228,16 @@ const DeliveryContainer = () => {
                 {
                     path: "/driver",
                     element:
-                        // Instead of doing conditional rendering we could maybe store all this in a page container?
                         routes.length === 0 ?
                             <p>Loading routes...</p>
                             :
                             <>
-                                {
-                                    // We can replace the 0 with an index i depending on current user signed in
-                                }
                                 <RouteDisplay
                                     route={currentDriverRoute}
                                     currentUser={currentUser}
                                 />
                                 <OrderList orders={routes[0].orders} />
                             </>
-
                 },
                 {
                     path: "/driver/profile",
@@ -256,7 +255,7 @@ const DeliveryContainer = () => {
         }
     ]);
 
-    return (<RouterProvider router={deliveryRoutes} />);
+    return <RouterProvider router={deliveryRoutes} />;
 }
 
 export default DeliveryContainer;

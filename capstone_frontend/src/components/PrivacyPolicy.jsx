@@ -6,7 +6,6 @@ const PrivacyPolicy = () => {
     const [privacyOpen, setPrivacyOpen] = useState(false);
 
     return (
-
         <>
             <Link
                 onClick={() => setPrivacyOpen(true)}
@@ -116,7 +115,6 @@ const PrivacyPolicy = () => {
                     </Button>
                 </DialogActions>
             </Dialog >
-
         </>
     );
 }

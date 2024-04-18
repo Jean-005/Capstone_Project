@@ -1,4 +1,5 @@
-import React from 'react';
+import { useState } from 'react';
+
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -11,9 +12,11 @@ import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 
+
 const Registration = ({addNewDriver}) => {
-    const [registerOpen, setRegisterOpen] = React.useState(false);
-    const [formData, setFormData] = React.useState({
+    // states
+    const [registerOpen, setRegisterOpen] = useState(false);
+    const [formData, setFormData] = useState({
         username: '',
         password: '',
         role: '',
@@ -21,6 +24,7 @@ const Registration = ({addNewDriver}) => {
         email: '',
     });
 
+    // functions
     const handleRegisterOpen = () => {
         setRegisterOpen(true);
     };

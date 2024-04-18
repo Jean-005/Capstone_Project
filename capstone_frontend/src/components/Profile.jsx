@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./Profile.css";
 
 const Profile = ({ driver, currentUser }) => {
-
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -36,11 +35,8 @@ const Profile = ({ driver, currentUser }) => {
 
                     </div>
                 </div>
-
                 :
-
                 <h1 className="branded-container" >Please Login</h1>
-
             }
         </div>
     );

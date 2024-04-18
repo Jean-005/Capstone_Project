@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import "./Help.css";
@@ -6,13 +7,15 @@ import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-const Help = ({currentUser}) => {
 
+const Help = ({currentUser}) => {
+    // states
     const [formData, setFormData] = useState({
         problem: '',
         description: ''
     });
 
+    // functions
     const handleInputChange = (event) => {
         setFormData({
             ...formData,
@@ -102,6 +105,6 @@ const Help = ({currentUser}) => {
             </footer>
         </div>
     );
-
 }
+
 export default Help;

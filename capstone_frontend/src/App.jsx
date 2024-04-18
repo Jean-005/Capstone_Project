@@ -3,7 +3,7 @@ import './App.css';
 import DeliveryContainer from './containers/DeliveryContainer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-
+// Override Mui styling for buttons, navigation and other mui components
 const theme = createTheme({
   palette: {
     primary: {
@@ -77,8 +77,6 @@ const theme = createTheme({
         },
       },
     },
-    
-
   }
 });
 
@@ -88,7 +86,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <DeliveryContainer />
       </ThemeProvider>
-      </>
+    </>
   );
 }
 

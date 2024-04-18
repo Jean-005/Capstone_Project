@@ -1,18 +1,17 @@
-
 #login-page {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #account-login {
-    color:#F22222;
+    color: #F22222;
     text-align: left;
     padding-bottom: 1.5rem;
-    font-size: 2rem ;
+    font-size: 2rem;
     margin: 0;
 }
-
 
 #login-header {
     position: fixed;
@@ -67,7 +66,7 @@ a {
 
 
 .button {
-    display: inline-block; 
+    display: inline-block;
 }
 
 .footer {
