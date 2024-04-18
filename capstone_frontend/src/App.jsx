@@ -1,6 +1,11 @@
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import DeliveryContainer from './containers/DeliveryContainer';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
 const theme = createTheme({
   palette: {
     primary: {
