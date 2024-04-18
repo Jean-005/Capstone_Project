@@ -18,8 +18,6 @@
 
 This project aims to improve delivery logistics by implementing an efficient route planning system for drivers. Currently, the delivery fleet is underutilised due to fixed routes and inefficient assignment practices that do not consider package quantities, leading to unreliable delivery times. By developing a dynamic route planning system, this project aims to optimise delivery routes, ensuring efficient vehicle utilisation and timely deliveries. The project's goal is to revolutionise delivery operations within RainforestRetail, maximising fleet efficiency and delivering a superior customer experience.
 
-This full-stack project utilised...
-
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -33,7 +31,7 @@ This full-stack project utilised...
 ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
 
 
 **The names and versions of libraries used:**
@@ -51,9 +49,15 @@ This full-stack project utilised...
 
 **Business case**
 
+[Link](https://docs.google.com/document/d/1Dwi3r5okjL_KaYhb1pgz5VXAs-lPhW75e9ivnyG0zX8/edit)
+
 **Risk register**
 
+[Link](https://docs.google.com/spreadsheets/d/1zadLMozuzAw5l-dovoioiaGYB4mqGuj3Vnu7KwqJPCk/edit#gid=578357748)
+
 **Legal and Ethical Standards**
+
+[Link](https://docs.google.com/document/d/19pYbzZjOPUX5-IniUgaeaoEL9Yq0Ssj4ty4eZUdIZ80/edit?usp=sharing) 
 
 
 
