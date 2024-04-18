@@ -83,17 +83,14 @@ This project aims to improve delivery logistics by implementing an efficient rou
 
 
 ## Planning Diagrams
+
 ### Project Timeline
 
-
-
-
-
+[Link](https://docs.google.com/spreadsheets/d/1hkHIXX6JbjZRdN_dqWqyAgj5Pg9uPYHRgv4Cyg2a0Vk/edit#gid=0)
 
 ### Wireframe
 
 ![Capstone_Wireframe](https://github.com/Jean-005/Capstone_Project/assets/132017960/5068cc4a-ef31-493a-b3c4-e4c41148144b)
-
 
 
 ### Entity Relationship Diagrams
@@ -128,8 +125,6 @@ This project aims to improve delivery logistics by implementing an efficient rou
 - Run the command ```git clone git@github.com:Jean-005/Capstone_Project.git```
 - In the terminal or Gitbash, create the database called delivery_db by running the command ```createdb delivery_db```.
 - In the terminal run the command ```./mvnw spring-boot:run```
-
-
 
 **Client-side**
 
@@ -187,7 +182,6 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 |:woman_mechanic:    | Yesica   | https://github.com/ney601        |
 |:rofl:    | Tommy    | https://github.com/Tommybui28    |
 
-## Resources
 
 ### Special thanks to:
 
@@ -198,6 +192,8 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 - Zsolt Podoba-Szalai
 
 **For their invaluable guidance and assistance with this project.**
+
+## Resources
 
 
 ## Licences
