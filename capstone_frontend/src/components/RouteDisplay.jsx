@@ -25,7 +25,7 @@ const RouteDisplay = ({route}) => {
         center={route.waypoints[0]}
         zoom={3}
         zoomControl={false}
-        style={{ height: "50vh", width: "100%"}}
+        style={{ height: "80vh", width: "50vw", margin: "1rem"}}
         whenCreated={map => setMap()}
       >
 

@@ -8,3 +8,6 @@
     background-color: #333;
     color: #fff;
   }
+#route-page {
+  display: flex;
+}
