@@ -32,7 +32,7 @@ public class Order {
     @Column
     private boolean isDelivered;
 
-    @JsonIgnore
+    @JsonIgnoreProperties({"orders"})
     @ManyToOne
     @JoinColumn(name="route_id")
     private Route route;
