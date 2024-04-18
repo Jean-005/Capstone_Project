@@ -11,6 +11,8 @@
 
 ## Project Description
 
+**Project Aims:**
+
 This full-stack project utilised...
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -46,7 +48,9 @@ This full-stack project utilised...
 - Spring Data JPA
 
 
-
+**Relevant documentation:**
+* Business case
+* Risk Register
 
 
 ### MVP
@@ -114,6 +118,15 @@ This full-stack project utilised...
 - Run the command **git pull** to ensure you have the latest version.
 - Open the react project in the preferred IDE such as Visual Studio Code.
 - Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
+*How to get a GeoAPIFY key:*
+
+## List of Example Routes:
+-Full urls including placeholders for variables (localhost:8080/users/:id)
+-Permitted requests for each route (GET, POST, etc)
+-Examples of permitted requests where appropriate
+-Examples of responses
+-Routes should be organised by route and not by request method
+
 
 ## Contributing Instructions
 
