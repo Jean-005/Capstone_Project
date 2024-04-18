@@ -129,21 +129,15 @@ This project aims to improve delivery logistics by implementing an efficient rou
 
 To use GeoAPIFY's mapping services with our project, you'll need to get a GeoAPIFY API key. Here's how to get one:
 
-1.Sign up for a GeoAPIFY Account by visiting the following link:
-
-[GeoAPIFY](https://www.geoapify.com/) 
-
+1. Sign up for a GeoAPIFY Account by visiting the following link: [GeoAPIFY](https://www.geoapify.com/) .
 2. Click on ```"Sign Up"```. Fill out the registration form and create your free account.
-   
-4. Obtain your API key by following these instructions: \
+3. Obtain your API key by following these instructions:
+- Once logged in to your GeoAPIFY account, navigate to your profile settings.
+- In your profile settings, you'll find your unique API key.
 
--Once logged in to your GeoAPIFY account, navigate to your profile settings.
--In your profile settings, you'll find your unique API key.
-
-5. Storing your API key securely:
-
-**-Important: Never share your API key publicly.** This is because it grants access to your GeoAPIFY account and should therefore be treated like a password.
-
+4. Storing your API key securely:
+**- Important: Never share your API key publicly.** This is because it grants access to your GeoAPIFY account and should therefore be treated like a password.
+- Store this API key securely within the project's environment variables - typically an ```.env``` file at the root of your project (outside the ```src``` directory.
 
 
 ## List of Example Routes:
