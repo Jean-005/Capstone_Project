@@ -1,3 +1,6 @@
+<p align="center"> <img width="953" alt="Screenshot 2024-04-18 at 15 44 23" src="https://github.com/Jean-005/Capstone_Project/assets/132017960/7bc31133-d1ed-4ca2-a94a-176572ee7108">
+
+                    
 <h1 align="center" id="title">Capstone Project</h1>
 
 ## Table of Contents
@@ -8,15 +11,15 @@
 5. [Planning Diagrams](#planning-diagrams)
 6. [Installation instructions](#installation-instructions)
 7. [Contributing Instructions](#contributing-instructions)
-9. [Credits and Acknowledgements](#credits-and-acknowledgements)
-9. [Resources](#resources)
-10. [Licences](#licences)
+8. [Credits and Acknowledgements](#credits-and-acknowledgements)
+9. [Licences](#licences)
 
 ## Project Description
 
 **Project Aims:**
 
 This project aims to improve delivery logistics by implementing an efficient route planning system for drivers. Currently, the delivery fleet is underutilised due to fixed routes and inefficient assignment practices that do not consider package quantities, leading to unreliable delivery times. By developing a dynamic route planning system, this project aims to optimise delivery routes, ensuring efficient vehicle utilisation and timely deliveries. The project's goal is to revolutionise delivery operations within RainforestRetail, maximising fleet efficiency and delivering a superior customer experience.
+
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
@@ -87,10 +90,6 @@ This project aims to improve delivery logistics by implementing an efficient rou
 
 [Link](https://docs.google.com/spreadsheets/d/1hkHIXX6JbjZRdN_dqWqyAgj5Pg9uPYHRgv4Cyg2a0Vk/edit#gid=0)
 
-### Wireframe
-
-![Capstone_Wireframe](https://github.com/Jean-005/Capstone_Project/assets/132017960/5068cc4a-ef31-493a-b3c4-e4c41148144b)
-
 
 ### Entity Relationship Diagrams
 
@@ -105,10 +104,9 @@ This project aims to improve delivery logistics by implementing an efficient rou
 
 ![Screenshot 2024-04-17 at 09 01 19](https://github.com/Jean-005/Capstone_Project/assets/132017960/de006a71-f33b-4916-abe8-145f9afc579e)
 
+### Wireframe
 
-
-### The URL of the deployed website:
-
+![Capstone_Wireframe](https://github.com/Jean-005/Capstone_Project/assets/132017960/5068cc4a-ef31-493a-b3c4-e4c41148144b)
 
 
 ### The URL of the GitHub repository that contains the code:
@@ -159,7 +157,7 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 
 **2. Create a Branch:** Clone the forked repository to your local machine & create a new branch for your contribution.
 
-**3.Make Changes:** Make your changes to the code & ensure your changes follow our coding style.
+**3. Make Changes:** Make your changes to the code & ensure your changes follow our coding style.
 
 **4. Commit Your Changes:** Commit your changes to your local branch with a descriptive commit message.
 
@@ -191,9 +189,6 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 - Zsolt Podoba-Szalai
 
 **For their invaluable guidance and assistance with this project.**
-
-## Resources
-
 
 ## Licences
 
