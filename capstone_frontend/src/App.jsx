@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import DeliveryContainer from './containers/DeliveryContainer';
 import PrivacyPolicy from './components/PrivacyPolicy';
@@ -89,8 +88,9 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <DeliveryContainer />
+        <PrivacyPolicy /> 
       </ThemeProvider>
-    </>
+      </>
   );
 }
 
