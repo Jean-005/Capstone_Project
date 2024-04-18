@@ -5,8 +5,6 @@ import "./Help.css";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { Link } from "react-router-dom";
-// import img1 from "./images/deliveryTop.png";
 
 const Help = ({currentUser}) => {
 
